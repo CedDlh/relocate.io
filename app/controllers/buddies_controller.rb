@@ -1,10 +1,11 @@
 class BuddiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    # @buddies = policy_scope(User).where(buddy: true, params)
-    # @search_one = Tool.search_by_location_and_category(params[:location])
-    # @search_two = Tool.search_by_location_and_category(params[:category])
-    # @buddies = @search_one & @search_two
-    @buddies = policy_scope(User).search_buddy(params)
+    @search_one = policy_scope(User).search_buddy(params[:user][:plz])
+    @search_two = policy_scope(User).search_buddy(params[:user][:specialties])
+    @buddies = @search_one & @search_two
+    @buddies = @buddies.select { |user| user.buddy? }
   end
 
   def show

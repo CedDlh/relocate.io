@@ -1,1 +1,8 @@
-<h1>We found 5 buddies for you</h1>
+<h1>We found 5 buddies for you:</h1>
+
+<div>
+  <% @buddies.each do |b| %>
+    <p> Name: <%= b.first_name %> <%= b.last_name %> </p>
+    <p> Specialties: <%= b.specialties %></p>
+  <% end %>
+</div>
