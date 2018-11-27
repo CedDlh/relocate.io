@@ -17,6 +17,13 @@ class User < ApplicationRecord
   validates :languages, presence: true, if: :buddy?
   validates :specialties, presence: true, if: :buddy?
 
+  include PgSearch
+  pg_search_scope :search_buddy,
+                  against: [:plz, :specialties],
+                  using: {
+                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                  }
+
   def buddy?
     buddy == true
   end
