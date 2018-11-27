@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
@@ -24,4 +25,15 @@
   font-size: 25px;
   opacity: 0.8;
   margin-bottom: 20px;
+}
+
+.banner-show {
+  color: white;
+  text-align: center;
+  height: 40vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
