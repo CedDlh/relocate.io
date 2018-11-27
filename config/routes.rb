@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :buddies do
     resources :appointments, only: [:create, :edit, :delete]
   end
+
+  # arbi's fakeroute to pages#search
+  get "/search", to: "pages#search"
 end
