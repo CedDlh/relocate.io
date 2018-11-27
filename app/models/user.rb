@@ -27,4 +27,6 @@ class User < ApplicationRecord
   def buddy?
     buddy == true
   end
+
+  mount_uploader :photo, PhotoUploader
 end
