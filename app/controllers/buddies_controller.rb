@@ -1,7 +1,7 @@
 class BuddiesController < ApplicationController
   def index
     # @buddies = policy_scope(User).where(buddy: true, params)
-    @buddies = policy_scope(User).order(created_at: :desc)
+    @buddies = policy_scope(User).search_buddy(params)
   end
 
   def show

@@ -31,5 +31,4 @@ group :development, :test do
 
   gem 'devise'
   gem "pundit"
-
 end
