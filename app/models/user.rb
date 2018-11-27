@@ -16,6 +16,7 @@ class User < ApplicationRecord
   validates :plz, presence: true, if: :buddy?
   validates :languages, presence: true, if: :buddy?
   validates :specialties, presence: true, if: :buddy?
+  validates :description, presence: true, if: :buddy?
 
   include PgSearch
   pg_search_scope :search_buddy,

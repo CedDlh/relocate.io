@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="new-form">
+    <div class="display-photo"></div>
+    <%= simple_form_for @buddy do |f| %>
+      <%= f.input :photo, label: 'Please upload a photo:', wrapper_html: { class: 'reduce-width' } %>
+      <%#= f.input :specialties, wrapper_html: { class: 'reduce-width' } %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :city %>
+      <%= f.input :plz %>
+      <%= f.input :languages %>
+      <%= f.input :buddy %>
+      <%#= f.input :available, default: true %>
+      <%= f.input :description %>
+      <%= f.button :submit , class: 'btn-primary' %>
+    <% end %>
+  </div>
+</div>
