@@ -1,20 +1,45 @@
-<h2>Log in</h2>
+<div class="banner" style="background-image: url('http://mzwnews.com/wp-content/uploads/2017/09/Blog-Berlin-move.jpg');">
+  <div class="banner-content">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
+    <h2 class="text-center">Create your account</h2>
+    <div class="form-container">
+
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :first_name,
+        required: true,
+        autofocus: true ,
+        input_html: { autocomplete: "first_name" }%>
+        <%= f.input :last_name,
+        required: true,
+        autofocus: true ,
+        input_html: { autocomplete: "last_name" }%>
+        <%= f.input :email,
+        required: true,
+        autofocus: true ,
+        input_html: { autocomplete: "email" }%>
+        <%= f.input :password,
+        required: true,
+        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+        input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation,
+        required: true,
+        input_html: { autocomplete: "new-password" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Sign up", class: "button" %>
+      </div>
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+
+
+    </div>
   </div>
+</div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
