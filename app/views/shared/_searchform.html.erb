@@ -1,33 +1,21 @@
-<div class="form-container">
-<%= form_tag buddy_path, method: :get do %>
-  <%#= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-  <%#= select_tag "location", options_from_collection_for_select(@locations, "id", "name")  %>
-  <div class="form-group">
-    <%= text_field_tag :plz,
-    params[:plz],
-    class: "form-control",
-    placeholder: "Enter your postcode"%>
-  </div>
-  <div class="form-group">
-  <%= select_tag "specialites", options_for_select(@buddy, "specialites"),
-    include_blank: true,
-    class: "form-control",
-    prompt: "Select a procedure" %>
-  </div>
-    <div class="form-group">
-  <%= select_tag "@", options_for_select(@tools, "category"),
-    include_blank: true,
-    class: "form-control",
+<div class="container">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Flatpickr Demo</h2>
 
-    prompt: "Select a category" %>
-  </div>
-  <%= button_tag "Submit", class: "button" %>
+    <%= simple_form_for :search, { url: "/search", method: "get" } do |f| %>
+      <%= f.input :plz,
+      class: "form-control",
+      placeholder: "Enter your postcode"%>
 
-<% end %>
+      <%= f.select "specialites", options_for_select(@buddy, "specialites"),
+      include_blank: true,
+      class: "form-control",
+      prompt: "Select a procedure" %>
+
+      <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+
+    <% end %>
+  </div>
 </div>
-
-
