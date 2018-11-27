@@ -29,4 +29,6 @@ group :development, :test do
   gem 'dotenv-rails'
 
   gem 'devise'
+  gem "pundit"
+
 end
