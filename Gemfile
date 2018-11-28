@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'pg_search'
+gem 'devise'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -29,7 +30,7 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 
-  gem 'devise'
+
   gem "pundit"
 end
 
