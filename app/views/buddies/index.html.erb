@@ -1,17 +1,15 @@
-  <div>
+  <%= render "shared/loader" %>
+
+  <% if @buddy %>
+    <%= link_to buddy_path(@buddy.id) do%>
+      <div class="btn-submit-index">Match me with buddy</div>
+    <% end %>
+    <% end %>
   <%= render "shared/banner" %>
 
   <div>
     <% @buddies.each do |b| %>
-      <p> Name: <%= b.first_name %> <%= b.last_name %> </p>
-      <p> Specialties: <%= b.specialties %></p>
+    <p> <% b.first_name %> <% b.last_name %> </p>
+    <p> <% b.specialties %></p>
     <% end %>
   </div>
-  <div>
-    <% if @buddy %>
-      <%= link_to "Match me with buddy", buddy_path(@buddy.id)%>
-    <% end %>
-  </div>
-
-</div>
-

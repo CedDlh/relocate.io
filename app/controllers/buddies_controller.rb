@@ -8,8 +8,8 @@ class BuddiesController < ApplicationController
     @buddies = @buddies.select { |user| user.buddy? }
     @buddy = @buddies.sample
 
-
     @title = "We found #{@buddies.size} #{'Buddy'.pluralize(@buddies.size)} for you"
+
     # raise
   end
 
