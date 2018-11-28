@@ -15,7 +15,4 @@ class BuddiesController < ApplicationController
     @buddy = User.find(params[:id])
     authorize @buddy
   end
-
-
-
 end
