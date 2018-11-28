@@ -30,6 +30,10 @@
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
 
+    <% if params[:buddy] %>
+    <p>SO YOU WANT TO BECOME A BUDDY MAN ??</p>
+    <% end %>
+
   <div class="form-actions">
         <%= f.button :submit, "Sign up", class: "submit-button" %>
       </div>
