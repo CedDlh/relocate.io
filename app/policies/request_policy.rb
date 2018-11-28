@@ -1,5 +1,5 @@
-class UserPolicy < ApplicationPolicy
-  def show?
+class RequestPolicy < ApplicationPolicy
+  def create?
     true
   end
 

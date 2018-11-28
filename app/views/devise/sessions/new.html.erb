@@ -2,21 +2,13 @@
   <div class="banner-content">
 
 
-    <h2 class="text-center">Create your account</h2>
+    <h2 class="text-center">Enter your details</h2>
     <div class="form-container">
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
       <div class="form-wrapper">
-        <%= f.input :first_name,
-        required: true,
-        autofocus: true ,
-        input_html: { autocomplete: "first_name" }%>
-        <%= f.input :last_name,
-        required: true,
-        autofocus: true ,
-        input_html: { autocomplete: "last_name" }%>
         <%= f.input :email,
         required: true,
         autofocus: true ,
@@ -25,11 +17,8 @@
         required: true,
         hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
         input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-        required: true,
-        input_html: { autocomplete: "new-password" } %>
       <div class="form-actions">
-        <%= f.button :submit, "Sign up", class: "submit-button" %>
+        <%= f.button :submit, "Log in", class: "submit-button" %>
       </div>
 
       </div>
