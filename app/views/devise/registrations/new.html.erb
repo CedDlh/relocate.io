@@ -22,6 +22,18 @@
                 autofocus: true ,
                 input_html: { autocomplete: "email" }%>
     <%= f.hidden_field :buddy, :value => false %>
+    <% if params[:buddy] %>
+      <%= f.input :plz,
+                  class: "form-control",
+                  placeholder: "Enter your postcode"%>
+      <% @specialties = ["Anmeldung", "Bank Account", "Tax Advise" ] %>
+
+      <%= f.select "specialties", options_for_select(@specialties, "specialties"),
+                    include_blank: true,
+                    class: "form-control",
+                    prompt: "Select a procedure" %>
+      <%= f.hidden_field :buddy, :value => true %>
+    <% end %>
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -29,6 +41,7 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+
 
   <div class="form-actions">
         <%= f.button :submit, "Sign up", class: "submit-button" %>
