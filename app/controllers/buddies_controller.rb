@@ -10,7 +10,7 @@ class BuddiesController < ApplicationController
   end
 
   def show
-    @buddy = User.find(id: params[:id])
+    @buddy = User.find(params[:id])
     authorize @buddy
   end
 end
