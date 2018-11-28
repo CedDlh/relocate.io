@@ -16,4 +16,3 @@ class BuddiesController < ApplicationController
   end
 end
 
-
