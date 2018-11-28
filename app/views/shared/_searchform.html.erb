@@ -1,9 +1,6 @@
 <div class="container">
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h2>Search</h2>
-
-    <%= simple_form_for @user, { url: "/buddies", :method => :get } do |f| %>
-
+    <%= simple_form_for @user, { url: "/buddies", method: "get" } do |f| %>
       <%= f.input :plz,
       placeholder: "Enter your postcode",
       include_blank: false,
@@ -14,7 +11,9 @@
       prompt: "Select a procedure",
       required: true %>
 
-      <%= f.submit "Go", class: "btn btn-primary" %>
+
+       <!-- f.input :pick_a_date, as: :string, required: false, input_html: {class: "datepicker"}  -->
+      <%= f.button :submit, "Go", class: "submit-button" %>
 
     <% end %>
   </div>
