@@ -1,7 +1,5 @@
 <div class="container">
   <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-    <h2>Flatpickr Demo</h2>
-
     <%= simple_form_for @user, { url: "/buddies", method: "get" } do |f| %>
       <%= f.input :plz,
       class: "form-control",
@@ -13,7 +11,8 @@
       prompt: "Select a procedure" %>
 
        <!-- f.input :pick_a_date, as: :string, required: false, input_html: {class: "datepicker"}  -->
-      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+      <%= f.button :submit, "Go", class: "submit-button" %>
+
 
     <% end %>
   </div>
