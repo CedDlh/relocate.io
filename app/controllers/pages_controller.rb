@@ -5,6 +5,8 @@ class PagesController < ApplicationController
     # @buddy = User.find_by(buddy: true)
     @user = User.new
     @specialties = ["Anmeldung", "Bank Account", "Tax advise"]
+    @title = "RELOCATE TO BERLIN"
+    @subtitle = "Find a BUDDY to relocate & onboard you to Berlin"
   end
 
   def search

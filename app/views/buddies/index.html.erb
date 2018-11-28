@@ -1,8 +1,12 @@
-<h1>We found <%= @buddies.size %> <%= "Buddy".pluralize(@buddies.size) %> for you:</h1>
-
 <div>
-  <% @buddies.each do |b| %>
-    <p> Name: <%= b.first_name %> <%= b.last_name %> </p>
-    <p> Specialties: <%= b.specialties %></p>
-  <% end %>
+
+  <%= render "shared/banner" %>
+
+  <div>
+    <% @buddies.each do |b| %>
+      <p> Name: <%= b.first_name %> <%= b.last_name %> </p>
+      <p> Specialties: <%= b.specialties %></p>
+    <% end %>
+  </div>
 </div>
+
