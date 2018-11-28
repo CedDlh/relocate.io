@@ -1,5 +1,4 @@
-<div>
-
+  <div>
   <%= render "shared/banner" %>
 
   <div>
@@ -8,5 +7,11 @@
       <p> Specialties: <%= b.specialties %></p>
     <% end %>
   </div>
+  <div>
+    <% if @buddy %>
+      <%= link_to "Match me with buddy", buddy_path(@buddy.id)%>
+    <% end %>
+  </div>
+
 </div>
 

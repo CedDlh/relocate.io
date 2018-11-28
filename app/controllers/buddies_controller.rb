@@ -6,6 +6,9 @@ class BuddiesController < ApplicationController
     @search_two = policy_scope(User).search_buddy(params[:user][:specialties])
     @buddies = @search_one & @search_two
     @buddies = @buddies.select { |user| user.buddy? }
+    @buddy = @buddies.sample
+
+
     @title = "We found #{@buddies.size} #{'Buddy'.pluralize(@buddies.size)} for you"
     # raise
   end
@@ -15,4 +18,3 @@ class BuddiesController < ApplicationController
     authorize @buddy
   end
 end
-
