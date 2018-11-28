@@ -4,11 +4,12 @@
       <%= f.input :plz,
       placeholder: "Enter your postcode",
       include_blank: false,
-      class: "form-control" %>
+      class: "form-control", required: true %>
 
       <%= f.select "specialties", options_for_select(@specialties, "specialties"),
       class: "form-control",
       prompt: "Select a procedure",
+      include_blank: false,
       required: true %>
 
 
