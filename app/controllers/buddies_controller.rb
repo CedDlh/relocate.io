@@ -7,8 +7,6 @@ class BuddiesController < ApplicationController
     @buddies = @search_one & @search_two
     @buddies = @buddies.select { |user| user.buddy? }
     @buddy = @buddies.sample
-
-
     @title = "We found #{@buddies.size} #{'Buddy'.pluralize(@buddies.size)} for you"
     # raise
   end
