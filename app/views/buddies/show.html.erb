@@ -18,7 +18,7 @@
 
     <div>
       <h3><a class="btn btn-lg btn-primary btn-book" href="">send message!</a></h3>
-      <h3><a class="btn btn-lg btn-primary btn-book" href="">request</a></h3>
+      <h3><%= link_to "request",  buddy_request_index_path (@buddy), class: "btn btn-lg btn-primary btn-book"%> </h3>
       <h3><a class="btn btn-lg btn-primary btn-book" href="">new match</a></h3>
     </div>
   </div>
@@ -26,7 +26,7 @@
 
   <div class="col-xs-12 col-sm-8">
     <div class="row">
-      <p>discription</p>
+      <p>description</p>
     </div>
 
     <div class="row">
