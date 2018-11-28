@@ -1,7 +1,11 @@
 <div class="container flexbox">
   <div class="row banner-show" style="background-image: url('http://mzwnews.com/wp-content/uploads/2017/09/Blog-Berlin-move.jpg');">
 
-    <h1>Hi Fernanda, I'm Ole the legend</h1>
+    <% if user_signed_in? %>
+      <h1>Hi <%= current_user.first_name %>, I'm <%= @buddy.first_name %></h1>
+    <% else %>
+      <h1>Hi, I'm <%= @buddy.first_name %></h1>
+    <% end %>
   </div>
 <div>
 
