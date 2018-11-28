@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'pg_search'
 gem 'devise'
+gem "pundit"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -29,7 +30,6 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
-  gem "pundit"
 end
 
 gem 'cloudinary', '~> 1.9.1'
