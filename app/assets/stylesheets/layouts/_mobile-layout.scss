@@ -3,19 +3,22 @@
     width: 70% !important;
     left: 15% !important;
     top: 67% !important;
+    font-size: unset;
   }
 
   .banner{
     background-position: center !important;
   }
 
-  .form-wrapper {
-    width: 97% !important;
-    top: 55% !important;
-    left: 1% !important;
-  }
 
   .content {
+  position: absolute !important;
+  top: 10% !important;
+  left: 0% !important;
+  }
+
+
+  .content-banner {
   position: absolute !important;
   top: 10% !important;
   left: 10% !important;
@@ -28,13 +31,22 @@
   }
 
   .form-wrapper-signup {
-    top: 1% !important;
+    top: 10% !important;
     left: 0% !important;
     width: 90% !important;
   }
 
   .form-wrapper {
-    display: flex-inline !important;
+    display: inline-block !important;
+    top: 45% !important;
+    left: 20% !important;
   }
 
+  .centered-btn {
+    margin-top: 10px !important;
+  }
+
+  .box {
+  display: flex-inline !important;
+  }
 }

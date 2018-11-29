@@ -20,4 +20,3 @@ function hideLoading() {
 
 $(document).ready(function(){
   setTimeout(hideLoading, 2000);
-});
