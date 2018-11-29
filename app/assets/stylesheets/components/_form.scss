@@ -1,12 +1,106 @@
 
-.form-wrapper { background-color: rgba(255,255,255,0.9);
-    padding: 25px 25px;
-    border-radius: 5px;
-    box-shadow: 0 0.5px 0.5px rgba(0,0,0,0.4);
-    margin: 20px;
-    color: grey;
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    align-items: center;
+    top: 60%;
+    left: 16.5%;
   }
 
-.form-wrapper p {
+
+.form-wrapper-login { background-color: rgba(255,255,255,0.7);
+    padding: 25px 25px;
+    border-radius: 5px;
+    box-shadow: 0 0.5px 0.5px rgba(0,0,0,0.3);
+    margin: 20px;
+    color: grey;
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    width:33%;
+  }
+
+
+  .form-wrapper-signup { background-color: rgba(255,255,255,0.7);
+    padding: 25px 25px;
+    border-radius: 5px;
+    box-shadow: 0 0.5px 0.5px rgba(0,0,0,0.3);
+    margin: 10px;
+    color: grey;
+    position: absolute;
+    top: 8%;
+    left: 33%;
+    width: 33%;
+  }
+
+  .form-wrapper p {
   color: grey;
-}
+  }
+
+  .form-group {
+    margin-bottom: 5px !important;
+  }
+
+
+    /*the container must be positioned relative:*/
+  #user_specialties {
+    position: relative;
+    height: 40px;
+    width: 220px;
+    margin: 10px;
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  #user_specialties select {
+    display: none;
+    border-radius: 5px; /*hide original SELECT element:*/
+  }
+
+  #user_id {
+    position: relative;
+    height: 40px;
+    width: 220px;
+    margin: 10px;
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+  }
+
+  .input-field{
+    position: relative;
+    height: 40px;
+    width: 220px;
+    margin: 10px;
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+  }
+
+  #user_plz {
+    position: relative;
+    height: 40px;
+    width: 220px;
+    margin: 10px;
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+  }
+
+  #user_availabilities {
+    position: relative;
+    height: 40px;
+    width: 220px;
+    margin: 10px;
+    background-color: white;
+    color: grey;
+    border-radius: 5px;
+  }
+
+
+
+
+
+
