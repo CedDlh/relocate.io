@@ -21,6 +21,10 @@ class BuddyPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def my_requests
+    user.buddy?
+  end
+
   class Scope < Scope
     def resolve
       scope.all

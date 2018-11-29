@@ -29,7 +29,7 @@
       <% @specialties = ["Anmeldung", "Bank Account", "Tax Advise" ] %>
 
       <%= f.select "specialties", options_for_select(@specialties, "specialties"),
-                    include_blank: true,
+                    include_blank: false,
                     class: "form-control",
                     prompt: "Select a procedure" %>
       <%= f.hidden_field :buddy, :value => true %>
