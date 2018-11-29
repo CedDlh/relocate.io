@@ -17,6 +17,24 @@ class BuddiesController < ApplicationController
     @buddy = User.find(params[:id])
     @chatroom = ChatRoom.create
     authorize @buddy
+
+    # @buddy = User.where.not(latitude: nil, longitude: nil)
+
+    @markers = [
+      {
+        lng: @buddy.longitude,
+        lat: @buddy.latitude
+      }
+    ]
+
+    # @buddies = User.where.not(latitude: nil, longitude: nil)
+
+    # @markers = @buddies.map do |buddy|
+    #   {
+    #     lng: buddy.longitude,
+    #     lat: buddy.latitude
+    #   }
+    # end
   end
 
   def my_requests
