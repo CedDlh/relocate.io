@@ -14,10 +14,9 @@ function hideLoading() {
   // showContainer.classList.remove('hidden');
   // showContainer.classList.add('active');
 
-  $("#loading-buddy").fadeOut("slow");
-  $("#show-container").removeClass('hidden');
+  $("#loading-buddy").fadeOut(1500);
+  $("#show-container").fadeIn(3000).removeClass('hidden');
 }
 
 $(document).ready(function(){
-  setTimeout(hideLoading, 1000);
-});
+  setTimeout(hideLoading, 2000);
