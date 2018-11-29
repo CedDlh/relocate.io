@@ -23,15 +23,18 @@
         required: true %>
       </div>
 
-      <div>
-        <%= f.input :availabilities,
-        label: false,
-        as: :string,
-        required: false,
-        placeholder: " Pick a date",
-        input_html: { class: "datepicker", :value => Date.today }
-        %>
-      </div>
+      <div class="inputfield">
+        <div class="icon">
+          <i class="fas fa-calendar-alt" style="color: grey"></i>
+        </div>
+          <%= f.input :availabilities,
+          label: false,
+          as: :string,
+          required: false,
+          placeholder: "Pick a date",
+          input_html: { class: "datepicker", value: '' }
+          %>
+        </div>
 
       <div>
         <%= f.button :submit, "Find a buddy", class: "submit-button centered-btn" %>
