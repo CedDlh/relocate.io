@@ -19,5 +19,5 @@ function hideLoading() {
 }
 
 $(document).ready(function(){
-  setTimeout(hideLoading, 4000);
+  setTimeout(hideLoading, 1000);
 });
