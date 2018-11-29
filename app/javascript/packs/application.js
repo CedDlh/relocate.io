@@ -5,4 +5,5 @@ flatpickr(".datepicker", {})
 
 
 import "bootstrap";
+// import "./loader";
 
