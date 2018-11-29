@@ -12,6 +12,9 @@
       <!-- Links when logged in -->
       <%= link_to "Buddy", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Tasks", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <% if current_user.buddy? %>
+      <%= link_to "My requests", my_requests_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <% end %>
       <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->

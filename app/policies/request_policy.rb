@@ -3,6 +3,10 @@ class RequestPolicy < ApplicationPolicy
     true
   end
 
+  def update?
+    record.buddy == user
+  end
+
   class Scope < Scope
     def resolve
       scope.all
