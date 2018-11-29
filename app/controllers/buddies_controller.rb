@@ -1,5 +1,6 @@
 class BuddiesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_after_action :verify_authorized, only: [:my_requests]
 
   def index
     @search_one = policy_scope(User).search_buddy(params[:user][:plz])
@@ -14,5 +15,9 @@ class BuddiesController < ApplicationController
   def show
     @buddy = User.find(params[:id])
     authorize @buddy
+  end
+
+  def my_requests
+    @requests = policy_scope(Request.where(buddy_id: current_user.id))
   end
 end

@@ -2,13 +2,13 @@
   <div class="banner-content">
 
 
-    <h2 class="text-center">Enter your details</h2>
+    <h2 class="content">Enter your details</h2>
     <div class="form-container">
 
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
-      <div class="form-wrapper">
+      <div class="form-wrapper-login">
         <%= f.input :email,
         required: true,
         autofocus: true ,
@@ -20,12 +20,13 @@
       <div class="form-actions">
         <%= f.button :submit, "Log in", class: "submit-button" %>
       </div>
-
+      <div class="link">
+        <%= render "devise/shared/links" %>
+      </div>
       </div>
 
       <% end %>
 
-      <%= render "devise/shared/links" %>
 
 
     </div>

@@ -1,3 +1,11 @@
+<div id="loading-buddy">
+ Hold a moment!!! We are matching you with a suitable buddy...
+  <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+   <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+</svg>
+</div>
+
+<div id="show-container" class="hidden">
 <div class="container1">
   <div class="banner1" style="background-image: url('http://mzwnews.com/wp-content/uploads/2017/09/Blog-Berlin-move.jpg');">
     <% if user_signed_in? %>
@@ -16,7 +24,9 @@
         <p><%= @buddy.first_name %> is a verfified Buddy</p>
           <a class="submit-button" href="">Send Message!</a>
 
-          <a class="submit-button" href="">Request Appointment</a>
+          <%= link_to "request", buddy_requests_path(@buddy),
+                  method: :post,
+                  class: "btn btn-lg btn-primary btn-book" %>
 
           <a class="submit-button-match" href="">New Match</a>
 
@@ -45,6 +55,7 @@
       <div class="review">
         <p>Ratings from Movers</p>
 
+
       </div>
 
     </div>
@@ -53,10 +64,7 @@
 
 </div>
 
-
-
-
-
-
-
+<%= content_for :after_js do %>
+  <%= javascript_pack_tag 'loader' %>
+<% end %>
 
