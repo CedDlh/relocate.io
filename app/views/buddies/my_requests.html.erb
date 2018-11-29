@@ -1,0 +1,17 @@
+<div class="text-center">
+  <h2>These are your requests:</h2>
+  <% @requests.each do |r| %>
+    <p> Created at: <%= r.created_at %></p>
+    <p>Status: <%= r.status %></p>
+    <% if r.status == "Pending" %>
+      <%= link_to "Accept", buddy_request_path(current_user, r, id: r.id, status: "Accepted"),
+                  method: :patch,
+                  class: "btn btn-primary" %>
+
+      <%= link_to "Decline", buddy_request_path(current_user, r, id: r.id, status: "Declined"),
+                  method: :patch,
+                  class: "btn btn-danger" %>
+    <% end %>
+    <p>User: <%= r.user.first_name %></p>
+  <% end %>
+</div>
