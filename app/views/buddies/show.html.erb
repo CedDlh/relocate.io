@@ -21,7 +21,7 @@
       </div>
       <div class="action">
         <div class="actionContainer">
-        <p><%= @buddy.first_name %> is a verfified Buddy</p>
+        <p><%= @buddy.first_name %> is a verified Buddy</p>
           <a class="submit-button" href="">Send Message!</a>
 
           <%= link_to "request", buddy_requests_path(@buddy),
@@ -54,17 +54,12 @@
       </div>
       <div class="review">
         <p>Ratings from Movers</p>
-
-
       </div>
-
     </div>
-
   </div>
-
 </div>
 
-<%= content_for :after_js do %>
+  <%= content_for :after_js do %>
   <%= javascript_pack_tag 'loader' %>
 <% end %>
 
