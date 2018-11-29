@@ -9,13 +9,15 @@
     background-position: center !important;
   }
 
-  .form-wrapper {
-    width: 97% !important;
-    top: 55% !important;
-    left: 1% !important;
-  }
 
   .content {
+  position: absolute !important;
+  top: 10% !important;
+  left: 10% !important;
+  }
+
+
+  .content-banner {
   position: absolute !important;
   top: 10% !important;
   left: 10% !important;
@@ -34,7 +36,15 @@
   }
 
   .form-wrapper {
-    display: flex-inline !important;
+    display: inline-block !important;
+    top: 45% !important;
+    left: 20% !important;
   }
 
+  .centered-btn {
+    margin-top: 10px !important;
+    height: 39px;
+    width: 100%;
+    padding: 8px;
+  }
 }
