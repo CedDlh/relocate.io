@@ -6,14 +6,19 @@
     <%= simple_form_for @user, { url: "/buddies", method: "get" } do |f| %>
 
     <div class="form-wrapper">
-      <div>
-        <%= f.input :plz,
-        label: false,
-        as: :string,
-        input_html: {class: 'input-field'},
-        placeholder: "Enter your postcode",
-        include_blank: false,
-        class: "form-control", required: true %>
+      <div class="inputfield">
+        <div class="icon">
+          <i class= "fas fa-map-marker-alt" style="color: grey"></i>
+        </div>
+        <div>
+          <%= f.input :plz,
+          label: false,
+          as: :string,
+          input_html: {class: 'input-field'},
+          placeholder: "Enter postcode",
+          include_blank: false,
+          class: "form-control", required: true %>
+        </div>
       </div>
 
       <div>

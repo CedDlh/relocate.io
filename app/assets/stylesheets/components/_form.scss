@@ -63,7 +63,7 @@
     position: relative;
     height: 40px;
     width: 220px;
-    margin: 10px;
+    margin: 0px;
     background-color: white;
     color: grey;
     border-radius: 5px;
@@ -81,19 +81,24 @@
 
   #user_plz {
     position: relative;
-    height: 40px;
-    width: 220px;
-    margin: 10px;
+    height: 30px;
+    width: 170px;
+    margin: 0px;
+    text-align: center;
     background-color: white;
     color: grey;
-    border-radius: 5px;
+    border-radius: 0px;
+    border-style: none;
+    border: none;
+    box-shadow: none;
+    padding-top: 10px
   }
 
   #user_availabilities {
     position: relative;
     height: 30px;
-    width: 150px;
-    margin: 10px;
+    width: 170px;
+    margin: 5px;
     text-align: center;
     background-color: white;
     color: grey;
