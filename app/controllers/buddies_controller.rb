@@ -5,6 +5,7 @@ class BuddiesController < ApplicationController
   def index
     @search_one = policy_scope(User).search_buddy(params[:user][:plz])
     @search_two = policy_scope(User).search_buddy(params[:user][:specialties])
+    @search_three = policy_scope(User).search_buddy(params[:user][:date]) # "2018-11-01"
     @buddies = @search_one & @search_two
     @buddies = @buddies.select { |user| user.buddy? }
     @buddy = @buddies.sample

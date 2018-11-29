@@ -23,12 +23,12 @@
       </div>
 
       <div>
-        <%= f.input :plz,
+        <%= f.input :availabilities,
         label: false,
         as: :string,
         required: false,
         placeholder: "Pick a date",
-        input_html: {class: "datepicker"}
+        input_html: { class: "datepicker", :value => Date.today }
         %>
       </div>
 
