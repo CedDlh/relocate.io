@@ -1,20 +1,42 @@
+
+
 <div class="container">
-  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+
+
     <%= simple_form_for @user, { url: "/buddies", method: "get" } do |f| %>
-    <%= f.input_field :plz,
-      placeholder: "Enter your postcode",
-      include_blank: false,
-      class: "form-control", required: true %>
 
-      <%= f.select "specialties", options_for_select(@specialties, "specialties"),
-      prompt: "Select a procedure",
-      required: true,
-      class: "form-control",
-      include_blank: false %>
+    <div class="form-wrapper">
+      <div>
+        <%= f.input :plz,
+        label: false,
+        input_html: {class: 'input-field'},
+        placeholder: "Enter your postcode",
+        include_blank: false,
+        class: "form-control", required: true %>
+      </div>
 
-       <!-- f.input :pick_a_date, as: :string, required: false, input_html: {class: "datepicker"}  -->
-      <%= f.button :submit, "Go", class: "submit-button" %>
+      <div>
+        <%= f.select "specialties", options_for_select(@specialties, "specialties"),
+        prompt: "Select a procedure",
+        required: true,
+        include_blank: false %>
+      </div>
+
+      <div>
+        <%= f.input :plz,
+        label: false,
+        as: :string,
+        required: false,
+        placeholder: "Pick a date",
+        input_html: {class: "datepicker"}
+        %>
+      </div>
+
+      <div>
+        <%= f.button :submit, "Find a buddy", class: "submit-button centered-btn" %>
+      </div>
+    </div>
 
     <% end %>
-  </div>
 </div>
+
