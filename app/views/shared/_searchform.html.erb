@@ -9,6 +9,7 @@
       <div>
         <%= f.input :plz,
         label: false,
+        as: :string,
         input_html: {class: 'input-field'},
         placeholder: "Enter your postcode",
         include_blank: false,
@@ -18,8 +19,8 @@
       <div>
         <%= f.select "specialties", options_for_select(@specialties, "specialties"),
         prompt: "Select a procedure",
-        required: true,
-        include_blank: false %>
+        include_blank: false,
+        required: true %>
       </div>
 
       <div>
