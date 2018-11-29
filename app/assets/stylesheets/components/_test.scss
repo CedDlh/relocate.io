@@ -1,0 +1,105 @@
+.container1 {
+  height: 100vh ;
+  width: 100vw ;
+  background: red;
+}
+
+.banner1 {
+  height: 30vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover !important;
+}
+
+
+.containerContent{
+  height: 70vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  padding: 0 40px;
+}
+
+.contentLeft {
+    height: 100%;
+    width: 30%;
+    background: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+.avatar1 {
+    background: black;
+    border-radius: 50%;
+    /* position: absolute; */
+    /* top: -18%; */
+    height: 30vh;
+    width: 30vh;
+    transform: translateY(-15vh);
+}
+
+.action {
+    height: 50%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.13);
+    transform: translateY(-9vh);
+    padding: 15px;
+}
+
+.actionContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  p {
+    font-size: 1.5vw;
+    margin-bottom: 10px;
+  }
+}
+
+.contentRight {
+  height: 100%;
+  width: 70%;
+  background: purple;
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  height: 30%;
+  width:100%;
+  background: yellow;
+}
+
+.description p {
+  font-size: 1.3vw;
+}
+
+.specialPlusMap {
+  height: 50%;
+  width:100%;
+  background: grey;
+  display: flex;
+}
+
+.special {
+  height: 100%;
+  width: 50%;
+  background: orange;
+}
+
+.map {
+  height: 100%;
+  width: 50%;
+}
+
+.review {
+  height: 20%;
+  width:100%;
+}
