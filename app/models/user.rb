@@ -34,5 +34,8 @@ class User < ApplicationRecord
     buddy == true
   end
 
+  geocoded_by :plz
+  after_validation :geocode, if: :will_save_change_to_plz?
+
   mount_uploader :photo, PhotoUploader
 end
