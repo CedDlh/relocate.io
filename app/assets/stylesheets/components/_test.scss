@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: center;
   background-size: cover !important;
+  background-position: center;
 }
 
 
@@ -34,16 +35,14 @@
 }
 
 .avatar1 {
-    background: black;
+    // background: black;
     border-radius: 50%;
-    /* position: absolute; */
-    /* top: -18%; */
     height: 30vh;
     width: 30vh;
     transform: translateY(-15vh);
     background-position: center;
     //from arbi
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .action {
@@ -52,6 +51,7 @@
     background-color: rgba(0, 0, 0, 0.10);
     transform: translateY(-9vh);
     padding: 15px;
+    border-radius: 10px;
 }
 
 .actionContainer {
@@ -70,7 +70,7 @@
 .contentRight {
   height: 100%;
   width: 70%;
-  background: purple;
+  // background: purple;
   display: flex;
   flex-direction: column;
 }
@@ -88,7 +88,7 @@
 .specialPlusMap {
   height: 50%;
   width:100%;
-  background: grey;
+  // background: grey;
   display: flex;
 }
 
@@ -142,27 +142,29 @@
     align-items: center;
 }
 
-.map {
+.map1 {
   height: 100%;
   width: 60%;
-  background: orange;
+  // background: orange;
   display: flex;
   flex-direction: column;
   padding: 15px;
 }
+
 
 .mapContainer {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    text-align: center;
+    // justify-content: space-between;
+    // text-align: center;
   p {
     font-size: 1.5vw;
     margin-bottom: 10px;
   }
 }
+
 
 .review {
   height: 20%;

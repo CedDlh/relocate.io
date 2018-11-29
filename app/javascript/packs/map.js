@@ -5,12 +5,16 @@ const mapElement = document.getElementById('map');
 
 if (mapElement) { // only build a map if there's a div#map to inject into
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
-const map = new mapboxgl.Map({
+  const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v10',
   //center: [-74.50, 40], // starting position [lng, lat]
-  zoom: 12 // starting zoom
+  zoom: 0 // starting zoom
 });
+
+  map.addControl(new mapboxgl.NavigationControl());
+
+
 
 const markers = JSON.parse(mapElement.dataset.markers);
 console.log(markers)
