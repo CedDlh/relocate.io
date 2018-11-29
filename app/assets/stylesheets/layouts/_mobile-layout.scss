@@ -14,7 +14,7 @@
   .content {
   position: absolute !important;
   top: 10% !important;
-  left: 10% !important;
+  left: 0% !important;
   }
 
 
@@ -47,6 +47,6 @@
   }
 
   .box {
-    display: flex-inline !important;
-}
+  display: flex-inline !important;
+  }
 }
