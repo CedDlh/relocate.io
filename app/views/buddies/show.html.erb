@@ -54,6 +54,8 @@
                   class: "submit-button" %>
           <% if @next_match >= 1 %>
             <%= link_to "New Match", buddy_path(@next_match), class: "submit-button-match" %>
+          <% elsif @next_match < 0 %>
+            <%= "Please login for more results!" %>
           <% else %>
             <%= "Sorry, no more matches for your search!" %>
           <% end %>
