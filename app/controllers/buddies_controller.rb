@@ -20,7 +20,7 @@ class BuddiesController < ApplicationController
       @request = Request.find_by(buddy_id: @buddy.id, user_id: current_user.id, status: "Waiting")
       @next_match = next_match
     else
-      @next_match = 0
+      @next_match = -1
     end
     @markers = [
       {
