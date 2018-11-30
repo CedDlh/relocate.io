@@ -15,7 +15,6 @@
   width: 100vw;
   background-color: rgb(222, 222, 222);
   color: #FDA16D;
-  font-size: 35px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
   opacity: 1;
@@ -24,7 +23,13 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+
+  p {
+     font-size: 40px;
+  }
 }
+
+
 
 #loading-buddy.disabled {
   opacity: 0;
@@ -67,19 +72,19 @@
 
 @-webkit-keyframes colors {
   0% {
-    stroke: #4285F4;
+    stroke: #FDA16D;
   }
   25% {
-    stroke: #DE3E35;
+    stroke: #FDA16D;
   }
   50% {
-    stroke: #F7C223;
+    stroke: #FDA16D;
   }
   75% {
-    stroke: #1B9A59;
+    stroke: #FDA16D;
   }
   100% {
-    stroke: #4285F4;
+    stroke: #FDA16D;
   }
 }
 

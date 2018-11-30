@@ -15,6 +15,7 @@ class BuddiesController < ApplicationController
 
   def show
     @buddy = User.find(params[:id])
+    @chatroom = ChatRoom.create
     authorize @buddy
 
     # @buddy = User.where.not(latitude: nil, longitude: nil)

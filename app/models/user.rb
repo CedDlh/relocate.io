@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :requests, :class_name => 'Request', :foreign_key => 'user_id'
   has_many :requests, :class_name => 'Request', :foreign_key => 'buddy_id'
   has_many :availabilities
+  has_many :messages, dependent: :destroy
 
   # # validations for both:
   validates :first_name, presence: true
