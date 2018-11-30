@@ -41,8 +41,12 @@
     width: 30vh;
     transform: translateY(-15vh);
     background-position: center;
+    // from wiebke
+    display:flex;
+    justify-content: center;
+    align-items: center;
     //from arbi
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 .action {
