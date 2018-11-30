@@ -40,4 +40,6 @@ class BuddiesController < ApplicationController
   def my_requests
     @requests = policy_scope(Request.where(buddy_id: current_user.id))
   end
+
+
 end
