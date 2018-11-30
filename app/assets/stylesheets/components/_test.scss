@@ -12,7 +12,11 @@
   align-items: center;
   justify-content: center;
   background-size: cover !important;
-  background-position: center;
+  background-position: 50% 75%;
+
+  h1 {
+    font-weight: bold;
+  }
 }
 
 
