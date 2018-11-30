@@ -1,10 +1,12 @@
   <%= render "shared/loader" %>
 
   <% if @buddy %>
-    <%= link_to buddy_path(@buddy.id) do%>
-      <div class="btn-submit-index">Match me with buddy</div>
-    <% end %>
-    <% end %>
+    <div class="btn-submit-index">
+      <%= link_to "Match me with buddy", buddy_path(@buddy.id)  %>
+    </div>
+      <!-- <div class="btn-submit-index">Match me with buddy</div> -->
+    <%# end %>
+  <% end %>
   <%= render "shared/banner" %>
 
   <div>

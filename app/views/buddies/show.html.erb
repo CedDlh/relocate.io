@@ -49,12 +49,14 @@
         <p><%= @buddy.first_name %> is a verified Buddy</p>
           <%= link_to "Send Message!", chat_room_path(@chatroom), class: 'submit-button', remote: true %>
 
-
           <%= link_to "Request", buddy_requests_path(@buddy),
                   method: :post,
                   class: "submit-button" %>
-
-          <a class="submit-button-match" href="">New Match</a>
+          <% if @next_match >= 1 %>
+            <%= link_to "New Match", buddy_path(@next_match), class: "submit-button-match" %>
+          <% else %>
+            <%= "Sorry, no more matches for your search!" %>
+          <% end %>
 
         </div>
 

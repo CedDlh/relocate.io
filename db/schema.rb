@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_145612) do
   end
 
   create_table "requests", force: :cascade do |t|
-    t.string "status", default: "Pending"
+    t.string "status"
     t.bigint "user_id"
     t.bigint "buddy_id"
     t.datetime "created_at", null: false
