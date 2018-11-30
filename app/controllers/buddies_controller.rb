@@ -8,7 +8,6 @@ class BuddiesController < ApplicationController
     create_requests(@buddies, current_user)
     @buddy = @buddies.sample
     @title = "We found #{@buddies.size} #{'Buddy'.pluralize(@buddies.size)} for you"
-    # @ids = ids(@buddies)
     # raise
   end
 
@@ -17,9 +16,12 @@ class BuddiesController < ApplicationController
     @chatroom = ChatRoom.create
     authorize @buddy
     # @buddy = User.where.not(latitude: nil, longitude: nil)
-    @request = Request.find_by(buddy_id: @buddy.id, user_id: current_user.id, status: "Waiting")
-
-    @next_match = next_match
+    if user_signed_in?
+      @request = Request.find_by(buddy_id: @buddy.id, user_id: current_user.id, status: "Waiting")
+      @next_match = next_match
+    else
+      @next_match = -1
+    end
     @markers = [
       {
         lng: @buddy.longitude,
