@@ -22,6 +22,7 @@ User.create(first_name: "Ole", last_name: "OD", city: "Berlin", plz: 12159,
 
 User.create(first_name: "Karl", last_name: "Kalla", city: "Berlin", plz: 10785,
             languages: ["English", "German"], specialties: "Anmeldung",
-            buddy: true, email: "kalla@od.com", password: "relocate")
+            buddy: true, email: "kalla@od.com", password: "relocate",
+            photo: open('https://res.cloudinary.com/da516w7pk/image/fetch/v1543521996/https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg'))
 
 puts "Buddies and admin user created. Admin mail: a@a.at, password: 12345678"
