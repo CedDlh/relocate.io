@@ -44,8 +44,13 @@
 
 
     /*the container must be positioned relative:*/
+
+
+
+    /*HOME PROCEDUE DROP-DOWN FIELD*/
   #user_specialties {
     position: relative;
+    text-align: center;
     height: 40px;
     width: 220px;
     margin: 10px;
@@ -53,6 +58,8 @@
     color: grey;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-size: 14px;
+    text-align-last: center
   }
   #user_specialties select {
     display: none;
@@ -79,26 +86,29 @@
     border-radius: 5px;
   }
 
+
+  /*HOME ENTER PLZ*/
   #user_plz {
     position: relative;
     height: 30px;
     width: 170px;
-    margin: 0px;
-    text-align: center;
     background-color: white;
     color: grey;
     border-radius: 0px;
     border-style: none;
     border: none;
     box-shadow: none;
-    padding-top: 10px
+    padding-left: 30px;
   }
 
+
+  /*datepicker enter home*/
   #user_availabilities {
     position: relative;
     height: 30px;
     width: 170px;
     margin: 5px;
+    margin-left: 0px;
     text-align: center;
     background-color: white;
     color: grey;
