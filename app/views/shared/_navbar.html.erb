@@ -11,7 +11,7 @@
 
       <!-- Links when logged in -->
       <%= link_to "Buddy", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Tasks", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Tasks", my_tasks_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% if current_user.buddy? %>
       <%= link_to "My requests", my_requests_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <% end %>
