@@ -47,7 +47,7 @@
         <div class="actionContainer">
 
         <p><%= @buddy.first_name %> is a verified Buddy</p>
-          <%= link_to "Send Message!", chat_room_path(@chatroom), class: 'submit-button', remote: true %>
+          <%= link_to "Send Message", chat_room_path(@chatroom), class: 'submit-button', remote: true %>
 
           <%= link_to "Request", buddy_requests_path(@buddy),
                   method: :post,
