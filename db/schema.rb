@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_142248) do
-
+ActiveRecord::Schema.define(version: 2018_11_29_145612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,7 +52,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_142248) do
   end
 
   create_table "requests", force: :cascade do |t|
-    t.string "status", default: "Pending"
+    t.string "status"
     t.bigint "user_id"
     t.bigint "buddy_id"
     t.datetime "created_at", null: false
