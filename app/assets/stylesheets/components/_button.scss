@@ -66,6 +66,12 @@
   left: 35%;
   top: 60%;
   font-size: unset;
+  transform: translateY(100vh);
+  transition: all ease 1s;
+  // display: none;
+  animation-name: btn-animation;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .centered-btn {
@@ -76,6 +82,14 @@
   margin: 10px;
 
 }
+
+
+@keyframes btn-animation {
+    0%   {transform: translateY(100vh);}
+    // 1%  {}
+    100% {transform: translateY(0)}
+}
+
 
 
 /* Build your own button classes ! */
