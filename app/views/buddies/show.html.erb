@@ -28,7 +28,7 @@
 
 <div id="show-container" class="hidden">
 <div class="container1">
-  <div class="banner1" style="background-image: url('http://mzwnews.com/wp-content/uploads/2017/09/Blog-Berlin-move.jpg');">
+  <div class="banner1" style="background-image: url('https://fbcoverstreet.com/content/439L15S1D8280Hbk2X041m5GF3K93J4l2YCfK8l432LBT478P6354944YMN3Ucw6.jpg');">
     <% if user_signed_in? %>
       <h1>Hi <%= current_user.first_name %>, I'm <%= @buddy.first_name %></h1>
     <% else %>
@@ -47,7 +47,7 @@
         <div class="actionContainer">
 
         <p><%= @buddy.first_name %> is a verified Buddy</p>
-          <%= link_to "Send Message!", chat_room_path(@chatroom), class: 'submit-button', remote: true %>
+          <%= link_to "Send Message", chat_room_path(@chatroom), class: 'submit-button', remote: true %>
 
           <%= link_to "Request", buddy_requests_path(@buddy),
                   method: :post,
@@ -108,7 +108,7 @@
 
         <div class="map1">
           <div class="mapContainer">
-            <p><%= @buddy.first_name %> Neighborhood</p>
+            <p><%= @buddy.first_name %>'s Neighborhood</p>
           <div
           id="map"
           style="width: 100%;
