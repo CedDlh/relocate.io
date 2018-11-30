@@ -38,7 +38,7 @@
   <div class="containerContent">
     <div class="contentLeft">
       <div class="avatar1">
-      <img src="https://res.cloudinary.com/da516w7pk/image/fetch/w_220,h_220,c_fill,g_face,r_max,f_auto/https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+        <%= cl_image_tag @buddy.photo, height: 250, width: 250, crop: :fill, gravity: :face, radius: :max %>
 
       </div>
 
