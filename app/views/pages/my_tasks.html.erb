@@ -1,0 +1,21 @@
+  <div>
+  <div class="banner-request" style="background-image: url('https://projectgallery.ca/cms/media/paper_crumpled_light_shadow_35117_1920x1080.jpg'">
+      <h1> Your tasks are:</h1>
+  </div>
+</div>
+
+<div class=" container text-center">
+  <% if @requests %>
+  <% @requests.each do |r| %>
+    <div class="request">
+      <div class=" request-body">
+        <p>User: <%= r.user.first_name %></p>
+      </div>
+      <div class="request-body">
+        <p> Created at: <%= r.created_at %></p>
+        <p>Status: <%= r.status %></p>
+     </div>
+</div>
+<% end %>
+<% end %>
+</div>
