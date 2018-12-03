@@ -47,7 +47,7 @@
         <div class="actionContainer">
 
         <p><%= @buddy.first_name %> is a verified Buddy</p>
-          <%= link_to "Send Message", chat_room_path(@chatroom), class: 'submit-button', remote: true %>
+          <%= link_to "Send Message", "#", class: 'submit-button', id: 'message', remote: true %>
 
           <%= link_to "Request", buddy_requests_path(@buddy),
                   method: :post,
@@ -126,8 +126,12 @@
     </div>
   </div>
 </div>
+<div id="chatbox" class="hidden">
+  <%= render 'shared/chatroom' %>
+</div>
 
   <%= content_for :after_js do %>
   <%= javascript_pack_tag 'loader' %>
+  <%= javascript_pack_tag 'chat' %>
 <% end %>
 

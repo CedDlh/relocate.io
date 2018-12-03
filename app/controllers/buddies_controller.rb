@@ -13,18 +13,23 @@ class BuddiesController < ApplicationController
   def show
     @buddy = User.find(params[:id])
     @chatroom = ChatRoom.create
+    @chat_room = ChatRoom.includes(messages: :user).find(params[:id])
     authorize @buddy
+    set_next_match
+    @markers = [{ lng: @buddy.longitude, lat: @buddy.latitude }]
+  end
+
+  def my_requests
+    @requests = policy_scope(Request.where(buddy_id: current_user.id))
+  end
+
+  def set_next_match
     if user_signed_in?
       @request = Request.find_by(buddy_id: @buddy.id, user_id: current_user.id, status: "Waiting")
       @next_match = next_match
     else
       @next_match = -1
     end
-    @markers = [{ lng: @buddy.longitude, lat: @buddy.latitude }]
-  end
-
-  def my_requests
-    @requests = policy_scope(Request.where(buddy_id: current_user.id))
   end
 
   def next_match
