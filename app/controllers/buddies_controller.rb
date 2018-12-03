@@ -51,7 +51,7 @@ class BuddiesController < ApplicationController
   def create_requests(buddies, user)
     if user
       buddies.each do |buddy|
-        Request.create!(status: "Waiting", buddy_id: buddy.id, user_id: user.id)
+        Request.create!(status: "Waiting", buddy_id: buddy.id, user_id: user.id, date: params[:date])
       end
     end
   end

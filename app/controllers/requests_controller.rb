@@ -1,8 +1,6 @@
 class RequestsController < ApplicationController
   def create
-    @user = current_user
-    @user.availabilty = params[:date]
-    @request = Request.new(user_id: current_user.id, buddy_id: params[:buddy_id], status: "Pending")
+    @request = Request.new(user_id: current_user.id, buddy_id: params[:buddy_id], status: "Pending", date: params[:date])
     @request.save
     authorize @request
   end
