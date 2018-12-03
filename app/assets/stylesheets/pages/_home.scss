@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+.container{
+  width: 1400px;
+}
+
 .background{
 background-color: white;
 }
@@ -11,13 +15,55 @@ background-color: white;
 
 h3{
   font-size: 20px;
+}
+
+h2{
   font-weight: bold;
 }
 
-p{
-  font-size: 15px;
+table {
+  width: 95%;
+  text-align: center;
+  table-layout:fixed;
 }
 
+th{
+  padding: 10px;
+  padding-bottom: 1px;
+  margin:3px;
+  text-align: center;
+}
 
+td{
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 1px;
+  padding-bottom: 70px;
+  margin:3px;
+  color: grey;
+  vertical-align: top;
+}
 
+.fa-calendar-plus{
+  font-size: 40px;
+  color: #FDA16D;
+}
 
+.fa-map:before {
+  font-size: 40px;
+  color: #FDA16D;
+}
+
+.fa-user-friends{
+  font-size: 40px;
+  color: #FDA16D;
+}
+
+.fa-comments:before {
+  font-size: 40px;
+  color: #FDA16D;
+}
+
+#explaination{
+  padding:20px;
+}
