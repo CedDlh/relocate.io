@@ -10,19 +10,19 @@ class AppointmentsController < ApplicationController
   @appointment.user = current_user
   authorize @buddy
 
-   if @appointment.save
-      redirect_to my_appointments_path
-    else
-      redirect_to buddy_path(@buddy)
-    end
+ if @appointment.save
+    redirect_to my_appointments_path
+  else
+    redirect_to buddy_path(@buddy)
+  end
 
   end
 
-   def update
+  def update
     @buddy = User.find(params[:buddy_id])
     @appointment.update(appoint_params)
     redirect_to my_appointments_path
-    end
+  end
 
   # def destroy
   #   @booking = Booking.find(params[:id])

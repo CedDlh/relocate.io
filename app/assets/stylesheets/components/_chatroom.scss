@@ -61,3 +61,18 @@ input.form-control {
     margin: 0;
   }
 }
+
+#chatbox {
+  z-index: 6;
+  .row {
+    margin: 0;
+    padding: 0;
+    .col-sm-6.col-sm-offset-3 {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 30%;
+      max-height: 70%;
+    }
+  }
+}
