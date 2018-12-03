@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :requests, only: [:create, :edit, :update]
     resources :appointments, only: [:create, :edit, :delete]
   end
+  resources :requests, only: [:destroy]
 
   # chat room#show && messages#create
   resources :chat_rooms, only: [:show] do
