@@ -5,7 +5,7 @@
       <a href="#"><i class="far fa-times-circle" id="close-btn"></i></a>
     </div>
     <div class="messages">
-      <% @chat_room.messages.each do |message| %>
+      <% @chat_room.messages.order(created_at: :asc).each do |message| %>
         <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
       <% end %>
     </div>
@@ -17,17 +17,5 @@
     </div>
   </div>
 </div>
-<script>
-    scrollLastMessageIntoView();
-    App['chat_room_<%= @chat_room.id %>'] = App.cable.subscriptions.create(
-      { channel: 'ChatRoomsChannel', chat_room_id: <%= @chat_room.id %> },
-      {
-        received: (data) => {
-          if (data.current_user_id !== <%= current_user.id %>) {
-            const messagesContainer = document.querySelector('.messages');
-            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-            scrollLastMessageIntoView();
-          }
-        }
-      })
-  </script>
+
+

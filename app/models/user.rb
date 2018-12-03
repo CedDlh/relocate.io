@@ -26,7 +26,7 @@ class User < ApplicationRecord
                     tsearch: { prefix: true }
                   }
   pg_search_scope :search_date,
-                  against: [:availabilities],
+                  against: [:availability],
                   using: {
                     tsearch: { prefix: true }
                   }
