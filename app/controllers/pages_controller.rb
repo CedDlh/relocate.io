@@ -12,7 +12,7 @@ class PagesController < ApplicationController
     # raise
   end
 
-    def my_tasks
+  def my_tasks
     @requests = policy_scope(Request.where(user_id: current_user.id))
   end
 end
