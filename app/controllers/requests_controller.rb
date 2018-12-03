@@ -17,6 +17,7 @@ class RequestsController < ApplicationController
   def destroy
     @request = Request.find(params[:id])
     authorize @request
+    @request.destroy
     redirect_to my_tasks_path
   end
 

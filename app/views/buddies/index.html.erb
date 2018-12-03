@@ -1,4 +1,3 @@
-  <%= render "shared/loader" %>
   <% if @buddy %>
     <div class="btn-submit-index">
       <%= link_to "Match me with a buddy", buddy_path(@buddy.id, date: params[:user][:availability])  %>

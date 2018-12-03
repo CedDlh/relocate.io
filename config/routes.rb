@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # get 'appointments/update'
   # get 'appointments/delte'
 
-  mount ActionCable.server => "/cable"
+    # mount ActionCable.server => "/cable"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :buddies do

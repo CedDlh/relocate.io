@@ -16,18 +16,16 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-
-   <!--  <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> -->
+    <%= render 'shared/alert' %>
 
     <%= yield %>
 
     <%= javascript_include_tag 'application' %>
+    <%= yield :after_js %>
     <%= javascript_pack_tag 'application' %>
     <%= javascript_pack_tag "map" %>
-
-    <%= yield :after_js %>
     <%= render 'shared/footer' %>
+    <%= yield :after_js2 %>
 
   </body>
 </html>

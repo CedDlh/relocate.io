@@ -28,7 +28,7 @@
 }
 
 .submit-button {
-  color: white;
+  color: white !important;
   padding: 10px 15px;
   border-radius: 4px;
   font-weight: bold;
@@ -37,6 +37,7 @@
   width: 100%;
   margin-top: 15px;
   font-size: unset;
+  text-decoration: none !important;
 }
 
 .submit-button:hover {
@@ -45,7 +46,7 @@
 }
 
 .submit-button-match {
-  color: white;
+  color: white !important;
   padding: 10px 15px;
   border-radius: 4px;
   font-weight: bold;
@@ -85,6 +86,7 @@ a:hover {
   animation-name: btn-animation;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+  color: white !important;
 }
 
 .btn-submit-index:hover {
@@ -94,7 +96,7 @@ a:hover {
 
 .centered-btn {
   margin-top: 10px !important;
-  height: 39px;
+  height: 50px;
   width: 220px;
   padding: 5px;
   margin: 10px;

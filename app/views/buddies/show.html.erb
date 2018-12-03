@@ -42,16 +42,13 @@
 
       </div>
 
-
+      <div><%= alert %></div>
       <div class="action">
         <div class="actionContainer">
-
         <p><%= @buddy.first_name %> is a verified Buddy</p>
-          <%= link_to "Send Message", "#", class: 'submit-button', id: 'message', remote: true %>
+          <%= link_to "Send Message", "#", class: 'submit-button', id: 'message' %>
 
-          <%= link_to "Request", buddy_requests_path(@buddy, date: params[:date]),
-                  method: :post,
-                  class: "submit-button" %>
+          <%= link_to "Request", buddy_requests_path(@buddy), method: :post, class: 'submit-button' %>
           <% if @next_match >= 1 %>
             <%= link_to "New Match", buddy_path(@next_match), class: "submit-button-match" %>
           <% elsif @next_match < 0 %>
@@ -130,8 +127,24 @@
   <%= render 'shared/chatroom' %>
 </div>
 
-  <%= content_for :after_js do %>
+  <%= content_for :after_js2 do %>
   <%= javascript_pack_tag 'loader' %>
   <%= javascript_pack_tag 'chat' %>
+  <script>
+    console.log("from afterjs2")
+    scrollLastMessageIntoView();
+    App['chat_room_<%= @chat_room.id %>'] = App.cable.subscriptions.create(
+      { channel: 'ChatRoomsChannel', chat_room_id: <%= @chat_room.id %> },
+      {
+        received: (data) => {
+          if (data.current_user_id !== <%= current_user.id %>) {
+            const messagesContainer = document.querySelector('.messages');
+            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+            scrollLastMessageIntoView();
+          }
+        }
+      }
+    )
+  </script>
 <% end %>
 

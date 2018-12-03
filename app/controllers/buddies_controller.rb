@@ -12,8 +12,18 @@ class BuddiesController < ApplicationController
 
   def show
     @buddy = User.find(params[:id])
-    @chatroom = ChatRoom.create
-    @chat_room = ChatRoom.includes(messages: :user).find(params[:id])
+
+    @current_user_chatrooms = []
+    Message.where(user: current_user).each { |message| @current_user_chatrooms << message.chat_room  }
+
+    @buddy_chatrooms = []
+    Message.where(user: @buddy).each { |message| @buddy_chatrooms << message.chat_room  }
+
+    chat_room_dual = (@current_user_chatrooms & @buddy_chatrooms).uniq
+
+    @chat_room = chat_room_dual[0]
+    @chat_room = ChatRoom.create! if @chat_room.nil?
+    authorize @chat_room
     authorize @buddy
     set_next_match
     @markers = [{ lng: @buddy.longitude, lat: @buddy.latitude }]
