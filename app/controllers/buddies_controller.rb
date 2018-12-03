@@ -5,6 +5,9 @@ class BuddiesController < ApplicationController
   def index
     @buddies = buddies_search
     @buddies = @buddies.select { |user| user.buddy? }
+    @available = Availability.new(date: params[:user][:availabilities], user: current_user).save!
+    raise
+
     create_requests(@buddies, current_user)
     @buddy = @buddies.sample
     @title = "We found #{@buddies.size} #{'Buddy'.pluralize(@buddies.size)} for you"

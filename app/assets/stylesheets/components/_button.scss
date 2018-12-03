@@ -64,7 +64,7 @@ a:hover {
 }
 
 
-.btn-submit-index a{
+.btn-submit-index {
   text-decoration:none;
   text-align: center;
   color: white;
@@ -87,6 +87,11 @@ a:hover {
   animation-fill-mode: forwards;
 }
 
+.btn-submit-index:hover {
+  cursor: pointer;
+  box-shadow: 0 0 50px rgba(33,33,33,.2);
+}
+
 .centered-btn {
   margin-top: 10px !important;
   height: 39px;
@@ -101,6 +106,44 @@ a:hover {
     0%   {transform: translateY(100vh);}
     // 1%  {}
     100% {transform: translateY(0)}
+}
+
+.btn-hover1 {
+    width: 180px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 38px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 5px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover1:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: white;
+    font-weight: 350;
+}
+
+.btn-hover1:focus {
+    outline: none;
+}
+
+.btn-hover1.color-4 {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
 }
 
 
