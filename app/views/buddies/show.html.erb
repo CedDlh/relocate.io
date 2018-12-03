@@ -42,16 +42,13 @@
 
       </div>
 
-
+      <div><%= alert %></div>
       <div class="action">
         <div class="actionContainer">
-
         <p><%= @buddy.first_name %> is a verified Buddy</p>
           <%= link_to "Send Message", "#", class: 'submit-button', id: 'message', remote: true %>
 
-          <%= link_to "Request", buddy_requests_path(@buddy),
-                  method: :post,
-                  class: "submit-button" %>
+          <%= link_to "Request", buddy_requests_path(@buddy), method: :post, class: 'submit-button' %>
           <% if @next_match >= 1 %>
             <%= link_to "New Match", buddy_path(@next_match), class: "submit-button-match" %>
           <% elsif @next_match < 0 %>
