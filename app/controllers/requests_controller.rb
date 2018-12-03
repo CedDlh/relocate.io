@@ -14,6 +14,12 @@ class RequestsController < ApplicationController
     redirect_to my_requests_path
   end
 
+  def destroy
+    @request = Request.find(params[:id])
+    authorize @request
+    redirect_to my_tasks_path
+  end
+
   private
 
   def request_params

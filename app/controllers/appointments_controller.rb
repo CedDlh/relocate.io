@@ -25,9 +25,9 @@ class AppointmentsController < ApplicationController
   end
 
   # def destroy
-  #   @booking = Booking.find(params[:id])
-  #   @booking.destroy
-  #   redirect_to bookings_path
+  #   @appointment = Appointment.find(params[:id])
+  #   @appointment.destroy
+  #   redirect_to my_tasks_path
   # end
 
 
