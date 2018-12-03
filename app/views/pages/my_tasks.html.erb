@@ -1,6 +1,6 @@
   <div>
   <div class="banner-request" style="background-image: url('https://projectgallery.ca/cms/media/paper_crumpled_light_shadow_35117_1920x1080.jpg'">
-      <h1 style="color:grey"> Your tasks are:</h1>
+    <h1 style="color:grey"> Your tasks are:</h1>
   </div>
 </div>
 
@@ -10,14 +10,14 @@
     <div class="request">
       <div class="request-body">
         <div class="avatar2">
-        <%= cl_image_tag r.user.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
+        <%= cl_image_tag r.buddy.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
 
         </div>
-        <p>Buddy: <%= r.user.first_name %></p>
+        <p>Buddy: <%= r.buddy.first_name %></p>
       </div>
       <div class="request-body" style= "align-self: self-start";>
-        <h2>Topic: Anmeldung</h2>
-        <p>Date: 12.12.2018</p>
+        <h2>Topic: <%= r.buddy.specialties %></h2>
+        <p>Date: <%= r.date %> </p>
         <p>Place: Burgeramt</p>
       </div>
 
