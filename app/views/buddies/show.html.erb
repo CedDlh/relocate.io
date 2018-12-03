@@ -46,7 +46,7 @@
       <div class="action">
         <div class="actionContainer">
         <p><%= @buddy.first_name %> is a verified Buddy</p>
-          <%= link_to "Send Message", "#", class: 'submit-button', id: 'message' %>
+          <%= link_to "Send Message", "#", class: 'submit-button', id: 'message', date: params[:date] %>
 
           <%= link_to "Request", buddy_requests_path(@buddy), method: :post, class: 'submit-button' %>
           <% if @next_match >= 1 %>
