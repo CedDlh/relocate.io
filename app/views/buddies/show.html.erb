@@ -49,7 +49,7 @@
         <p><%= @buddy.first_name %> is a verified Buddy</p>
           <%= link_to "Send Message", "#", class: 'submit-button', id: 'message', remote: true %>
 
-          <%= link_to "Request", buddy_requests_path(@buddy),
+          <%= link_to "Request", buddy_requests_path(@buddy, date: params[:date]),
                   method: :post,
                   class: "submit-button" %>
           <% if @next_match >= 1 %>
