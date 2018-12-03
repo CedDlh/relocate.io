@@ -1,8 +1,11 @@
 class RequestsController < ApplicationController
   def create
+    require "date"
     @request = Request.new(user_id: current_user.id, buddy_id: params[:buddy_id], status: "Pending", date: params[:date])
     @request.save
     authorize @request
+    redirect_to my_tasks_path(current_user)
+    flash[:notice] = "Your request has been sent"
   end
 
   def update

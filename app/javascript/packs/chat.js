@@ -10,7 +10,10 @@ function closeChat() {
 }
 
 const button = document.getElementById('message');
+
+if (button) {
 button.addEventListener("click", toggleChat);
+}
 // $(document).ready(function(){
 //   setTimeout(toggleChat, 1);
 // });
