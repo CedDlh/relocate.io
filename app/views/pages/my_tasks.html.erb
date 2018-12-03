@@ -26,7 +26,8 @@
         <p> Request sent: <%= r.created_at %></p>
         <div class="buttons">
         <button class="btn-hover color-1">Chat</button>
-        <button class="btn-hover color-11"><%= link_to "Delete", request_path(r), method: :delete %></button>
+        <%= link_to "Delete", request_path(id: r.id),
+                      method: :delete, class: "btn-hover color-11" %>
         </div>
      </div>
 </div>
