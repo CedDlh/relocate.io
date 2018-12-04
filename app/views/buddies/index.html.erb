@@ -1,5 +1,6 @@
   <% if @buddy %>
-    <div class="btn-submit-index">
+
+    <div class="btn-submit-index color-4">
       <%= link_to "Match me with a buddy", buddy_path(@buddy.id, date: params[:user][:availability]) %>
     </div>
 
