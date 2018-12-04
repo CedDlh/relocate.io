@@ -21,7 +21,7 @@
   .content-banner {
   position: absolute !important;
   top: 10% !important;
-  left: 10% !important;
+  left: 2% !important;
   }
 
   .form-wrapper-login {
@@ -135,6 +135,7 @@
     width: 100% !important;
     max-height: 70% !important;
     padding: 0px !important;
+    z-index: 100
   }
 
 .specialContainer{
