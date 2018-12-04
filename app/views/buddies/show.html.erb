@@ -46,11 +46,11 @@
       <div class="action">
         <div class="actionContainer">
         <p><%= @buddy.first_name %> is a verified Buddy</p>
-          <%= link_to "Send Message", "#", class: 'btn-hover1 color-4 submit-button', id: 'message' %>
+          <%= link_to "Send Message", "#", class: 'btn-hover1 color-4 submit-button bold', id: 'message' %>
 
-          <%= link_to "Request", buddy_requests_path(@buddy,  date: params[:date]), method: :post, class: 'btn-hover1 color-4 submit-button' %>
+          <%= link_to "Request", buddy_requests_path(@buddy,  date: params[:date]), method: :post, class: 'btn-hover1 color-4 submit-button bold' %>
           <% if @next_match >= 1 %>
-            <%= link_to "New Match", buddy_path(@next_match, date: params[:date]), class: "btn-hover1 color-8 submit-button" %>
+            <%= link_to "New Match", buddy_path(@next_match, date: params[:date]), class: "btn-hover1 color-8 submit-button bold" %>
           <% elsif @next_match < 0 %>
             <%= "Please login for more results!" %>
           <% else %>
