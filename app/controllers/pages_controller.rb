@@ -14,6 +14,20 @@ class PagesController < ApplicationController
 
   def my_tasks
     @requests = policy_scope(Request.where(user_id: current_user.id).where.not(status: "Waiting"))
+  end
 
+  def my_messages
+    @chats = Message.where(user_id: current_user.id).map { |m| [] << m.chat_room }.flatten.uniq
+    set_chat_room
+    @buddy = @chat_room.other_user(current_user)
+    # raise
+  end
+
+  def set_chat_room
+    if params[:id]
+      @chat_room = ChatRoom.find(params[:id])
+    else
+      @chat_room = @chats[0]
+    end
   end
 end

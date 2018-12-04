@@ -1,12 +1,9 @@
 function toggleChat() {
   document.getElementById('chatbox').classList.toggle('hidden');
-  // $("#chatbox").classList.toggle('hidden');
 }
-
 
 function closeChat() {
   document.getElementById('chatbox').classList.add('hidden');
-  // $("#chatbox").classList.toggle('hidden');
 }
 
 const button = document.getElementById('message');
@@ -20,3 +17,11 @@ button.addEventListener("click", toggleChat);
 const btnClose = document.getElementById('close-btn');
 btnClose.addEventListener("click",closeChat);
 
+const msgOpen = document.querySelectorAll('#open-message');
+
+if (msgOpen) {
+  for (var i = 0; i < msgOpen.length; i++) {
+    msgOpen[i].addEventListener("click", toggleChat())
+    event.preventDefault();
+  }
+}

@@ -1,0 +1,20 @@
+
+
+function replaceChatRoom() {
+  # Generate the partial
+
+  const chatRoom = '<%= j render "shared/chatroom", buddy: @buddy, chat_room: @chat_room %>'
+  # Remove previous chat
+
+  const currentChatroom = document.querySelector('.chatroomWindow')
+  if (currentChatroom) {
+    currentChatroom.remove();
+  }
+  # Add the new one
+  const container = document.querySelector(".container")
+  container.insertAdjacentHTML("beforeend", chatRoom);
+}
+
+console.log("hello")
+
+replaceChatRoom()

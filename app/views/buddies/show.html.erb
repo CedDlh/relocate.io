@@ -124,7 +124,7 @@
   </div>
 </div>
 <div id="chatbox" class="hidden">
-  <%= render 'shared/chatroom' %>
+  <%= render 'shared/chatroom', buddy: @buddy, chat_room: @chat_room %>
 </div>
 
   <%= content_for :after_js2 do %>
