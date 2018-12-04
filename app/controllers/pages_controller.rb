@@ -19,7 +19,7 @@ class PagesController < ApplicationController
   def my_messages
     @chats = Message.where(user_id: current_user.id).map { |m| [] << m.chat_room }.flatten.uniq
     set_chat_room
-    @buddy = @chat_room.other_user(current_user)
+    @buddy = User.find(@chat_room.buddy_id)
     # raise
   end
 
