@@ -26,15 +26,6 @@ ActiveRecord::Schema.define(version: 2018_12_03_164552) do
     t.index ["request_id"], name: "index_appointments_on_request_id"
   end
 
-  create_table "availabilities", force: :cascade do |t|
-    t.string "day"
-    t.datetime "hour"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_availabilities_on_user_id"
-  end
-
   create_table "chat_rooms", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -87,7 +78,6 @@ ActiveRecord::Schema.define(version: 2018_12_03_164552) do
   end
 
   add_foreign_key "appointments", "requests"
-  add_foreign_key "availabilities", "users"
   add_foreign_key "messages", "chat_rooms"
   add_foreign_key "messages", "users"
   add_foreign_key "requests", "users"
