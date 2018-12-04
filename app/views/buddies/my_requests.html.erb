@@ -1,46 +1,52 @@
-<div>
-  <div class="banner-request" style="background-image: url('https://projectgallery.ca/cms/media/paper_crumpled_light_shadow_35117_1920x1080.jpg'">
-      <h1> Your request are:</h1>
+ <div>
+    <div class="banner-request" style="background-image: url('https://projectgallery.ca/cms/media/paper_crumpled_light_shadow_35117_1920x1080.jpg'">
+      <h1 style="color:grey"> Your request are:</h1>
+    </div>
   </div>
-</div>
 
-<div class=" container-request text-center">
-  <% if @requests %>
-  <% @requests.each do |r| %>
+
+
+
+<div class="container-request text-center">
+    <% if @requests %>
+    <% @requests.each do |r| %>
     <div class="request">
-      <div class=" request-body">
+      <div class="request-body">
         <div class="avatar2">
-          <%= cl_image_tag r.user.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
+          <%= cl_image_tag r.buddy.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
+
         </div>
-        <div>
-          <p><%= r.user.first_name %></p>
-        </div>
+        <p><%= r.user.first_name %></p>
       </div>
+
+
+
       <div class="request-body" style= "align-self: self-start";>
         <h2>Topic: <%= r.user.specialties %></h2>
         <p>Date: <%= r.date %> </p>
         <p> Created at: <%= r.created_at %></p>
-        <p>Status: <%= r.status %></p>
       </div>
 
-      <div>
-        <% if r.status == "Pending" %>
-          <%= link_to "Accept", buddy_request_path(current_user, r, id: r.id, status: "Accepted"),
-                      method: :patch,
-                      class: "btn btn-primary" %>
+    <div>
+      <div class="request-body" style= "align-self: self-start";>
+        <h2>Status: <%= r.status %></h2>
+      </div>
 
-          <%= link_to "Decline", buddy_request_path(current_user, r, id: r.id, status: "Declined"),
-                      method: :patch,
-                      class: "btn btn-danger" %>
+
+      <div class="buttons">
+        <% if r.status == "Pending" %>
+          <%= link_to "Accept", buddy_request_path(current_user, r, id: r.id, status: "Accepted"), method: :patch, class: "btn-hover color-4" %>
+
+          <%= link_to "Decline", buddy_request_path(current_user, r, id: r.id, status: "Declined"), method: :patch, class: "btn-hover color-8"%>
         <% end %>
       </div>
+    </div>
+
 
     </div>
   <% end %>
   <% end %>
 </div>
-
-
 
 
 
