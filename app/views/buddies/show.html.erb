@@ -126,10 +126,12 @@
 <div id="chatbox" class="hidden">
   <%= render 'shared/chatroom' %>
 </div>
+  <% if user_signed_in? %>
 
   <%= content_for :after_js2 do %>
   <%= javascript_pack_tag 'loader' %>
   <%= javascript_pack_tag 'chat' %>
+
   <script>
     console.log("from afterjs2")
     scrollLastMessageIntoView();
@@ -146,5 +148,6 @@
       }
     )
   </script>
+<% end %>
 <% end %>
 
