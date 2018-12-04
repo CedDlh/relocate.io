@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def my_tasks
-    @requests = policy_scope(Request.where(user_id: current_user.id))
+    @requests = policy_scope(Request.where(user_id: current_user.id).where.not(status: "Waiting"))
 
   end
 end
