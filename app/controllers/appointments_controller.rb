@@ -1,21 +1,19 @@
 class AppointmentsController < ApplicationController
-
   def my_appointments
   end
 
   def create
-  @appointment = Appointment.new(appoint_params)
-  @buddy = User.find(params[:buddy_id])
-  @appointment.buddy = @buddy
-  @appointment.user = current_user
-  authorize @buddy
+    @appointment = Appointment.new(appoint_params)
+    @buddy = User.find(params[:buddy_id])
+    @appointment.buddy = @buddy
+    @appointment.user = current_user
+    authorize @buddy
 
- if @appointment.save
-    redirect_to my_appointments_path
-  else
-    redirect_to buddy_path(@buddy)
-  end
-
+    if @appointment.save
+      redirect_to my_appointments_path
+    else
+      redirect_to buddy_path(@buddy)
+    end
   end
 
   def update
@@ -29,7 +27,6 @@ class AppointmentsController < ApplicationController
   #   @appointment.destroy
   #   redirect_to my_tasks_path
   # end
-
 
   private
 
