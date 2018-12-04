@@ -1,19 +1,28 @@
-  <div>
+<div>
   <div class="banner-request" style="background-image: url('https://projectgallery.ca/cms/media/paper_crumpled_light_shadow_35117_1920x1080.jpg'">
       <h1> Your request are:</h1>
   </div>
 </div>
 
 <div class=" container-request text-center">
+  <% if @requests %>
   <% @requests.each do |r| %>
     <div class="request">
       <div class=" request-body">
-        <p>User: <%= r.user.first_name %></p>
+        <div class="avatar2">
+          <%= cl_image_tag r.user.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
+        </div>
+        <div>
+          <p><%= r.user.first_name %></p>
+        </div>
       </div>
-      <div class="request-body">
+      <div class="request-body" style= "align-self: self-start";>
+        <h2>Topic: <%= r.user.specialties %></h2>
+        <p>Date: <%= r.date %> </p>
         <p> Created at: <%= r.created_at %></p>
         <p>Status: <%= r.status %></p>
       </div>
+
       <div>
         <% if r.status == "Pending" %>
           <%= link_to "Accept", buddy_request_path(current_user, r, id: r.id, status: "Accepted"),
@@ -25,6 +34,15 @@
                       class: "btn btn-danger" %>
         <% end %>
       </div>
+
     </div>
   <% end %>
+  <% end %>
 </div>
+
+
+
+
+
+
+
