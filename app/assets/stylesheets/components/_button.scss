@@ -165,4 +165,50 @@ a:hover {
   letter-spacing: 1px;
 }
 
+.buttons {
+    display: flex;
+}
+
+.btn-hover {
+    width: 130px;
+    font-size: 16px;
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 25px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-4 {
+    background-image: linear-gradient(145deg, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
+}
+
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+
 /* Build your own button classes ! */
