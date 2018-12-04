@@ -28,34 +28,15 @@
 }
 
 .submit-button {
-  color: white !important;
   padding: 10px 15px;
-  border-radius: 4px;
   font-weight: bold;
-  background: #FDA16D;
-  transition: background 0.3s ease;
-  width: 100%;
-  margin-top: 15px;
-  font-size: unset;
-  text-decoration: none !important;
+  width: 100% !important;
+  margin: 10px !important;
 }
 
 .submit-button:hover {
 
 
-}
-
-.submit-button-match {
-  color: white !important;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: grey;
-  transition: background 0.3s ease;
-  width: 100%;
-  margin-top: 15px;
-  font-size: 1.3vw;
-  text-decoration: none;
 }
 
 
@@ -66,22 +47,27 @@ a:hover {
 
 
 .btn-submit-index {
-  text-decoration:none;
-  text-align: center;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: #FDA16D;
-  transition: background 0.3s ease;
-  width: 30%;
-  margin-top: 15px;
   position: absolute;
-  left: 35%;
+  left: 34%;
   top: 60%;
-  font-size: unset;
-  transform: translateY(100vh);
-  transition: all ease 1s;
+  padding: 7px;
+      width: 30%;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 50px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 5px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
   // display: none;
   animation-name: btn-animation;
   animation-duration: 2s;
@@ -89,9 +75,23 @@ a:hover {
   color: white !important;
 }
 
+
 .btn-submit-index:hover {
-  cursor: pointer;
-  box-shadow: 0 0 50px rgba(33,33,33,.2);
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: white;
+    font-weight: 350;
+}
+
+.btn-submit-index:focus {
+  outline: none;
+}
+.btn-submit-index.color-4 {
+    background-image: linear-gradient(145deg, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
 }
 
 .centered-btn {
@@ -111,12 +111,12 @@ a:hover {
 }
 
 .btn-hover1 {
-    width: 180px;
+    width: 220px;
     font-size: 16px;
     font-weight: 300;
     color: #fff;
     cursor: pointer;
-    margin: 20px;
+    margin: 10px;
     height: 50px;
     text-align:center;
     border: none;
@@ -128,6 +128,8 @@ a:hover {
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
 }
+
+
 
 .btn-hover1:hover {
     background-position: 100% 0;
@@ -148,6 +150,65 @@ a:hover {
     box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
 }
 
+.btn-hover1.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.fix {
+  margin: 0px !important;
+    margin-top: 10px !important;
+}
+
+.bold {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn-hover {
+    width: 130px;
+    font-size: 16px;
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 25px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-4 {
+    background-image: linear-gradient(145deg, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
+}
+
+.btn-hover.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
 
 
 /* Build your own button classes ! */

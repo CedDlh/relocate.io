@@ -1,32 +1,3 @@
-<div id="loading-buddy">
- <p>Stay with us !</p>
-  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-    <rect x="0" y="0" width="4" height="10" fill="#333">
-      <animateTransform attributeType="xml"
-        attributeName="transform" type="translate"
-        values="0 0; 0 20; 0 0"
-        begin="0" dur="0.6s" repeatCount="indefinite" />
-    </rect>
-    <rect x="10" y="0" width="4" height="10" fill="#333">
-      <animateTransform attributeType="xml"
-        attributeName="transform" type="translate"
-        values="0 0; 0 20; 0 0"
-        begin="0.2s" dur="0.6s" repeatCount="indefinite" />
-    </rect>
-    <rect x="20" y="0" width="4" height="10" fill="#333">
-      <animateTransform attributeType="xml"
-        attributeName="transform" type="translate"
-        values="0 0; 0 20; 0 0"
-        begin="0.4s" dur="0.6s" repeatCount="indefinite" />
-    </rect>
-  </svg>
-  <iframe src="https://giphy.com/embed/tXL4FHPSnVJ0A" width="480" height="317" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/kim-novak-tXL4FHPSnVJ0A"></a></p>
-
-<p> Our sexy algorithm is finding you a buddy</p>
-</div>
-
-<div id="show-container" class="hidden">
 <div class="container1">
   <div class="banner1" style="background-image: url('https://fbcoverstreet.com/content/439L15S1D8280Hbk2X041m5GF3K93J4l2YCfK8l432LBT478P6354944YMN3Ucw6.jpg');">
     <% if user_signed_in? %>
@@ -46,11 +17,11 @@
       <div class="action">
         <div class="actionContainer">
         <p><%= @buddy.first_name %> is a verified Buddy</p>
-          <%= link_to "Send Message", "#", class: 'submit-button', id: 'message' %>
+          <%= link_to "Send Message", "#", class: 'btn-hover1 color-4 submit-button bold', id: 'message' %>
 
-          <%= link_to "Request", buddy_requests_path(@buddy,  date: params[:date]), method: :post, class: 'submit-button' %>
+          <%= link_to "Request", buddy_requests_path(@buddy,  date: params[:date]), method: :post, class: 'btn-hover1 color-4 submit-button bold' %>
           <% if @next_match >= 1 %>
-            <%= link_to "New Match", buddy_path(@next_match, date: params[:date]), class: "submit-button-match" %>
+            <%= link_to "New Match", buddy_path(@next_match, date: params[:date]), class: "btn-hover1 color-8 submit-button bold" %>
           <% elsif @next_match < 0 %>
             <%= "Please login for more results!" %>
           <% else %>
@@ -71,7 +42,7 @@
 
         <div class="special">
           <div class="specialContainer">
-          <p>Tasks <%= @buddy.first_name %> is helping you with</p>
+          <p id= "mobilep">Tasks <%= @buddy.first_name %> is helping you with</p>
 
           <div class="specialKind">
             <div class="item1">
@@ -105,13 +76,13 @@
 
         <div class="map1">
           <div class="mapContainer">
-            <p><%= @buddy.first_name %>'s Neighborhood</p>
+            <p id="mapp"><%= @buddy.first_name %>'s Neighborhood</p>
           <div
           id="map"
           style="width: 100%;
           height: 100%;
           border-radius: 10px;"
-          data-markers="<%= @markers.to_json %>"
+          data-marker="<%= @marker.to_json %>"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
           ></div>
           </div>
@@ -122,14 +93,16 @@
       </div> -->
     </div>
   </div>
-</div>
+
 <div id="chatbox" class="hidden">
   <%= render 'shared/chatroom', buddy: @buddy, chat_room: @chat_room %>
 </div>
+  <% if user_signed_in? %>
 
   <%= content_for :after_js2 do %>
-  <%= javascript_pack_tag 'loader' %>
+
   <%= javascript_pack_tag 'chat' %>
+
   <script>
     console.log("from afterjs2")
     scrollLastMessageIntoView();
@@ -146,5 +119,6 @@
       }
     )
   </script>
+<% end %>
 <% end %>
 

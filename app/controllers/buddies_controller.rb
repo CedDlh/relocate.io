@@ -26,7 +26,7 @@ class BuddiesController < ApplicationController
     authorize @chat_room
     authorize @buddy
     set_next_match
-    @markers = [{ lng: @buddy.longitude, lat: @buddy.latitude }]
+    @marker = { lng: @buddy.longitude, lat: @buddy.latitude }
   end
 
   def my_requests
