@@ -92,22 +92,23 @@
   #user_plz {
     position: relative;
     height: 40px;
-    width: 170px;
-    background-color: white;
+    width: 189px;
+    background-color: transparent;
     color: grey;
     border-radius: 0px;
     border-style: none;
     border: none;
     box-shadow: none;
-    padding-left: 30px;
     font-size: 18px;
+    margin-left: -12px;
+    text-align: center;
   }
 
 
   /*datepicker enter home*/
   #user_availability {
     position: relative;
-    height: 30px;
+    height: 40px;
     width: 189px;
     margin: 5px;
     margin-left: -12px;
@@ -118,7 +119,7 @@
     border-style: none;
     border: none;
     box-shadow: none;
-    padding-top: 11px;
+    padding-top: 10px;
     font-size: 18px;
   }
 
