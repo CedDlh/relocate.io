@@ -21,7 +21,7 @@
   .content-banner {
   position: absolute !important;
   top: 10% !important;
-  left: 10% !important;
+  left: 2% !important;
   }
 
   .form-wrapper-login {
@@ -49,5 +49,112 @@
   .box {
   display: flex-inline !important;
   }
+
+  ////# showpage
+
+  .containerContent{
+    display: block !important;
+
+    height: 38% !important;
+    background: white;
+    display: flex;
+    padding: 0 20px !important;
+  }
+
+
+
+  .container1 {
+    height: 160vh !important;
+    background: white !important;
+  }
+
+  .contentLeft{
+    width: 50vh !important;
+    padding: 0 0px !important;
+    height: 355px !important;
+    margin-bottom: 0px !important;
+  }
+
+  .banner1{
+    background-position: 40% 30% !important;
+    h1{
+      font-size: 26px !important;
+      margin-top: 0 !important;
+    }
+  }
+
+  .actionContainer{
+    p{
+      font-size: 20px !important;
+    }
+  }
+
+  .contentRight{
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .special {
+    height: 30% !important;
+    width: 100% !important;
+  }
+
+  .map1{
+    height: 80% !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  .mapboxgl-canvas{
+    position: relative !important;
+  }
+
+  .specialPlusMap {
+    height: 80% !important;
+    width: 100% !important;
+    display: block !important;
+  }
+
+  .description{
+     height: 166px !important;
+      padding-top: -133px !important;
+      padding: 15px !important;
+    p{
+      font-size: 11px !important;
+    }
+  }
+  .action {
+    height: 240px !important;
+    width: 320px !important;
+    position: absolute !important;
+    top: 160px !important;
+  }
+  #chatbox .row .col-sm-6.col-sm-offset-3 {
+    position: fixed  !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: 70% !important;
+    padding: 0px !important;
+    z-index: 100
+  }
+
+.specialContainer{
+  p{
+      font-size: 11px !important;
+    }
+  }
+#mobilep{
+    font-weight: bold !important;
+  }
+
+.avatar1 {
+    border-radius: 130px !important;
+    height: 130px !important;
+    width: 130px !important;
+    position: absolute !important;
+    top: 50px !important;
+
+}
+
 
 }
