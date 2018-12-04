@@ -28,34 +28,15 @@
 }
 
 .submit-button {
-  color: white !important;
   padding: 10px 15px;
-  border-radius: 4px;
   font-weight: bold;
-  background: #FDA16D;
-  transition: background 0.3s ease;
-  width: 100%;
-  margin-top: 15px;
-  font-size: unset;
-  text-decoration: none !important;
+  width: 100% !important;
+  margin: 10px !important;
 }
 
 .submit-button:hover {
 
 
-}
-
-.submit-button-match {
-  color: white !important;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: grey;
-  transition: background 0.3s ease;
-  width: 100%;
-  margin-top: 15px;
-  font-size: 1.3vw;
-  text-decoration: none;
 }
 
 
@@ -169,6 +150,9 @@ a:hover {
     box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
 }
 
-
+.btn-hover1.color-8 {
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
 
 /* Build your own button classes ! */
