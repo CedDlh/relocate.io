@@ -1,7 +1,10 @@
 class RequestsController < ApplicationController
   def create
     require "date"
-    @request = Request.new(user_id: current_user.id, buddy_id: params[:buddy_id], status: "Pending", date: params[:date])
+
+    date_array = params[:date].split("-")
+    date = Date.new(date_array[2].to_i, date_array[1].to_i, date_array[0].to_i)
+    @request = Request.new(user_id: current_user.id, buddy_id: params[:buddy_id], status: "Pending", date: date )
     @request.save
     authorize @request
     redirect_to my_tasks_path(current_user)
