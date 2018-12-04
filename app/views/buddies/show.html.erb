@@ -95,7 +95,7 @@
   </div>
 
 <div id="chatbox" class="hidden">
-  <%= render 'shared/chatroom' %>
+  <%= render 'shared/chatroom', buddy: @buddy, chat_room: @chat_room %>
 </div>
   <% if user_signed_in? %>
 
