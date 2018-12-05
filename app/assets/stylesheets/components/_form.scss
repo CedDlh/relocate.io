@@ -71,9 +71,8 @@ select:-webkit-autofill:active {
     /*HOME PROCEDUE DROP-DOWN FIELD*/
   #user_specialties {
     position: relative;
-    text-align: center;
     height: 50px;
-    width: 220px;
+    width: 215px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -81,6 +80,10 @@ select:-webkit-autofill:active {
     text-align-last: center;
     background-color: white !important;
     color: rgba(155, 155, 155, 1) !important;
+    border: none;
+    margin-left: -25px;
+    padding-left: 16px;
+    outline: none;
   }
 
 
