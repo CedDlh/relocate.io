@@ -23,9 +23,11 @@
           <%= "Please login to chat with #{@buddy.first_name}"%>
           <% end %>
 
-          <%= link_to "Request", buddy_requests_path(@buddy, date: params[:date]),
-                                data: { confirm: "Do you want to send a request for #{params[:date]}?" },
-                                method: :post, class: 'btn-hover1 color-4 submit-button bold' %>
+          <!-- data: { confirm: "Do you want to send a request for #{params[:date]}?" }, -->
+          <div class="btn-hover1 color-4 submit-button bold" id="reqBtn" data-date="<%= params[:date] %>">REQUEST</div>
+
+          <%= link_to "Request", buddy_requests_path(@buddy, date: params[:date]), data: { date: params[:date] },
+                                method: :post, class: 'btn-hover1 color-4 submit-button bold', id: 'sweet-alert' %>
           <% if @next_match >= 1 %>
             <%= link_to "New Match", buddy_path(@next_match, date: params[:date]), class: "btn-hover1 color-8 submit-button bold" %>
           <% elsif @next_match < 0 %>
@@ -33,7 +35,6 @@
           <% else %>
             <%= "Sorry, no more matches for your search!" %>
           <% end %>
-
         </div>
 
       </div>
@@ -106,8 +107,8 @@
   </div>
 
     <%= content_for :after_js2 do %>
-
     <%= javascript_pack_tag 'chat' %>
+    <%= javascript_pack_tag 'alert' %>
 
     <script>
       console.log("from afterjs2")
@@ -124,6 +125,7 @@
           }
         }
       )
+
     </script>
   <% end %>
   <% end %>
