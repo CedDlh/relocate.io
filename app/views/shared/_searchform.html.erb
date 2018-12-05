@@ -22,11 +22,15 @@
       </div>
 
       <div class="inputfield">
+        <div class="icon">
+          <i class="fas fa-chevron-circle-down" style="color: grey"></i>
+        </div>
+        <div>
           <%= f.select "specialties", options_for_select(@specialties, "specialties"),
           prompt: "Select a procedure",
           include_blank: false,
           required: true %>
-
+        </div>
       </div>
 
       <div class="inputfield">
