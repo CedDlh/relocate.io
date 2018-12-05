@@ -6,6 +6,7 @@
   height: 50px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+
 }
 .footer-links {
   display: flex;
@@ -23,4 +24,11 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+
+// hard coded for my_tasks page from diago
+.bottom-fix {
+  position: absolute;
+  bottom: 0;
 }
