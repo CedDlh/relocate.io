@@ -10,7 +10,7 @@
       <% @chats.each do |r| %>
         <div class="request" id="message-open">
           <div class="request-body">
-            <p><%= r.messages[-1].content %></p>
+            <p><%= r.messages[-1]&.content %></p>
           </div>
           <div class="request-body">
             <div class="buttons">
@@ -21,9 +21,11 @@
         </div>
       <% end %>
   </div>
+        <% if @chat_room %>
   <div class="row chatroom-window">
     <div class="col-sm-6 col-sm-offset-3">
-      <div class="chat-header"><h4><%= @buddy.first_name %><%= @chat_room.name %></h4></div>
+      <div class="chat-header">
+        <h4><%= @buddy.first_name if @buddy %><%= @chat_room.name %></h4></div>
       <div class="messages">
         <% @chat_room.messages.order(created_at: :asc).each do |message| %>
           <%= render "messages/message", message: message, user_is_messages_author: message.user == current_user %>
@@ -35,26 +37,28 @@
           <%= f.submit ">", class: 'btn btn-primary' %>
         <% end %>
       <% end %>
+      <% end %>
       </div>
     </div>
   </div>
-
-<% content_for :after_js do %>
-  <script>
-    console.log("from afterjs")
-    scrollLastMessageIntoView();
-    App['chat_room_<%= @chat_room.id %>'] = App.cable.subscriptions.create(
-      { channel: 'ChatRoomsChannel', chat_room_id: <%= @chat_room.id %> },
-      {
-        received: (data) => {
-          if (data.current_user_id !== <%= current_user.id %>) {
-            const messagesContainer = document.querySelector('.messages');
-            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-            scrollLastMessageIntoView();
+<% if @chat_room %>
+  <% content_for :after_js do %>
+    <script>
+      console.log("from afterjs")
+      scrollLastMessageIntoView();
+      App['chat_room_<%= @chat_room.id %>'] = App.cable.subscriptions.create(
+        { channel: 'ChatRoomsChannel', chat_room_id: <%= @chat_room.id %> },
+        {
+          received: (data) => {
+            if (data.current_user_id !== <%= current_user.id %>) {
+              const messagesContainer = document.querySelector('.messages');
+              messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+              scrollLastMessageIntoView();
+            }
           }
         }
-      }
-    )
-  </script>
+      )
+    </script>
+  <% end %>
 <% end %>
 </div>
