@@ -6,7 +6,7 @@
   border: 1px solid #ececec;
   border-top: none;
   border-bottom-width: 0;
-  max-height: calc(100vh - 70px - 45px - 61px - 30px);
+  height: 35vh;
   overflow: scroll;
 }
 
@@ -73,6 +73,8 @@ input.form-control {
 
 #chatbox {
   z-index: 6;
+  position: absolute;
+  bottom: 0;
   .row {
     margin: 0;
     padding: 0;
@@ -86,4 +88,30 @@ input.form-control {
       z-index: 100
     }
   }
+}
+
+#message-box {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  .container-request {
+    align-self: self-start;
+    width: 30vw;
+  }
+  .row {
+    .col-sm-6.col-sm-offset-3 {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+#message-open {
+  height: 15vh;
+}
+.row.chatroom-window {
+  width: 47%;
+  align-self: self-end;
+  height: 60vh;
+  margin-right: -180px;
 }
