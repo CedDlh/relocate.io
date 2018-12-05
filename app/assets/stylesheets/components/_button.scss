@@ -56,6 +56,7 @@ a:hover {
   padding: 7px;
       width: 30%;
     font-size: 1.3em;
+    letter-spacing: 1px;
     font-weight: 300;
     color: #fff;
     cursor: pointer;
@@ -115,7 +116,7 @@ a:hover {
 
 .btn-hover1 {
     width: 220px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
     color: #fff;
     cursor: pointer;
@@ -130,6 +131,7 @@ a:hover {
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+    letter-spacing: 1px;
 }
 
 
@@ -141,7 +143,6 @@ a:hover {
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     color: white;
-    font-weight: 350;
 }
 
 .btn-hover1:focus {
