@@ -21,11 +21,12 @@
         </div>
       </div>
 
-      <div>
-        <%= f.select "specialties", options_for_select(@specialties, "specialties"),
-        prompt: "Select a procedure",
-        include_blank: false,
-        required: true %>
+      <div class="inputfield">
+          <%= f.select "specialties", options_for_select(@specialties, "specialties"),
+          prompt: "Select a procedure",
+          include_blank: false,
+          required: true %>
+
       </div>
 
       <div class="inputfield">
