@@ -79,7 +79,6 @@
   .input-field{
     position: relative;
     height: 40px;
-    width: 220px;
     margin: 10px;
     background-color: white;
     color: grey;
@@ -92,7 +91,7 @@
   #user_plz {
     position: relative;
     height: 40px;
-    width: 189px;
+    margin-left: 13px;
     background-color: transparent;
     color: grey;
     border-radius: 0px;
@@ -100,8 +99,9 @@
     border: none;
     box-shadow: none;
     font-size: 18px;
-    margin-left: -12px;
     text-align: center;
+    margin-left: -12px;
+
   }
 
 
@@ -141,6 +141,7 @@
 
   .icon{
     flex-direction: row-reverse;
+    z-index: 10;
   }
 
 
