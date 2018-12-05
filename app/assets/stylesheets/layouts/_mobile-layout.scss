@@ -114,11 +114,11 @@
   }
 
   .description{
-     height: 166px !important;
+     height: 220px !important;
       padding-top: -133px !important;
       padding: 15px !important;
     p{
-      font-size: 12px !important;
+      font-size: 15px !important;
     }
   }
   .action {
@@ -139,14 +139,14 @@
 
 .specialContainer{
   p{
-      font-size: 12px !important;
+      font-size: 15px !important;
     }
   }
 #mobilep{
     font-weight: bold !important;
   }
 #mapp{
-  font-size: 12px !important;
+  font-size: 15px !important;
   font-weight: bold !important;
 }
 
@@ -156,8 +156,14 @@
     width: 130px !important;
     position: absolute !important;
     top: 50px !important;
-
 }
 
-
+.item1 {
+    width: 10% !important;
+}
+.form-control{
+  width: 180px !important;
+  text-align: center !important;
+  border: none !important;
+}
 }

@@ -54,12 +54,12 @@
     height: 50px;
     width: 220px;
     margin: 10px;
-    background-color: white;
-    color: grey;
+    color: grey !important;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 18px;
-    text-align-last: center
+    text-align-last: center;
+    background-color: white !important;
   }
   #user_specialties select {
     display: none;
@@ -136,7 +136,7 @@
     background-color: white;
     color: grey;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: none;
   }
 
   .icon{
