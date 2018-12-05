@@ -57,11 +57,15 @@ input:-webkit-autofill:active {
 }
 
 input:-webkit-autofill {
-    -webkit-text-fill-color: grey !important;
+    -webkit-text-fill-color: rgba(155, 155, 155, 1) !important;
 }
 
 select:-webkit-autofill {
-    -webkit-text-fill-color: grey !important;
+    -webkit-text-fill-color: rgba(155, 155, 155, 1) !important;
+}
+
+select:-webkit-autofill:active {
+    -webkit-text-fill-color: rgba(128, 128, 128, 1) !important;
 }
 
     /*HOME PROCEDUE DROP-DOWN FIELD*/
@@ -75,8 +79,11 @@ select:-webkit-autofill {
     border: 1px solid #ccc;
     font-size: 18px;
     text-align-last: center;
-    // background-color: white !important;
+    background-color: white !important;
+    color: rgba(155, 155, 155, 1) !important;
   }
+
+
   #user_specialties select {
     display: none;
     border-radius: 5px; /*hide original SELECT element:*/
@@ -130,7 +137,7 @@ select:-webkit-autofill {
     margin-left: -12px;
     text-align: center;
     background-color: transparent;
-    color: grey;
+    color: rgba(155, 155, 155, 1) !important;
     border-radius: 0px;
     border-style: none;
     border: none;
