@@ -19,7 +19,9 @@
         <p><%= @buddy.first_name %> is a verified Buddy</p>
           <%= link_to "Send Message", "#", class: 'btn-hover1 color-4 submit-button bold', id: 'message' %>
 
-          <%= link_to "Request", buddy_requests_path(@buddy,  date: params[:date]), method: :post, class: 'btn-hover1 color-4 submit-button bold' %>
+          <%= link_to "Request", buddy_requests_path(@buddy, date: params[:date]),
+                                data: { confirm: "Do you want to send a request for #{params[:date]}?" },
+                                method: :post, class: 'btn-hover1 color-4 submit-button bold' %>
           <% if @next_match >= 1 %>
             <%= link_to "New Match", buddy_path(@next_match, date: params[:date]), class: "btn-hover1 color-8 submit-button bold" %>
           <% elsif @next_match < 0 %>

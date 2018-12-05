@@ -4,25 +4,25 @@
   </div>
 </div>
 
-<div style="display: flex; flex-direction: row" class="container">
-  <div class="container-request text-center" style="align-items: start";>
+<div class="container" id="message-box">
+  <div class="container-request text-center">
     <% if @chats %>
       <% @chats.each do |r| %>
-        <div class="request">
+        <div class="request" id="message-open">
           <div class="request-body">
             <p><%= r.messages[-1].content %></p>
           </div>
-          <div class="request-body" style= "align-self: self-start";>
+          <div class="request-body">
             <div class="buttons">
               <%#= link_to "Open", chat_room_path(@chat_room), class: 'submit-button', id: 'open-message' %>
-              <%= link_to "Open", chat_room_path(r), remote: true, class: 'submit-button', id: 'open-message' %>
+              <%= link_to "Open", chat_room_path(r), remote: true, class: 'btn-hover color-4', id: 'open-message' %>
             </div>
           </div>
         </div>
       <% end %>
   </div>
   <div class="row chatroom-window">
-    <div class="col-sm-6 col-sm-offset-3" style="width: 100%; margin-left: 0";>
+    <div class="col-sm-6 col-sm-offset-3">
       <div class="chat-header"><h4><%= @buddy.first_name %><%= @chat_room.name %></h4></div>
       <div class="messages">
         <% @chat_room.messages.order(created_at: :asc).each do |message| %>
