@@ -207,8 +207,8 @@ a:hover {
 }
 
 .btn-hover.color-4 {
-    background-image: linear-gradient(145deg, #fc6076, #ff9a44, #ef9d43, #e75516);
-    box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
+  background-image: linear-gradient(145deg, #fc6076, #ff9a44, #ef9d43, #e75516);
+  box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
 }
 
 .btn-hover.color-8 {
@@ -216,5 +216,32 @@ a:hover {
     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
+.swal-button {
+  font-weight: 100;
+  color: #fff;
+
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.swal-button:hover {
+  background-position: 100% 0 !important;
+  moz-transition: all .4s ease-in-out !important;
+  -o-transition: all .4s ease-in-out !important;
+  -webkit-transition: all .4s ease-in-out !important;
+  transition: all .4s ease-in-out !important;
+}
+.swal-button:focus {
+  outline: none;
+}
+.swal-button--confirm {
+  background-image: linear-gradient(145deg, #fc6076, #ff9a44, #ef9d43, #e75516);
+  box-shadow: 1px 0px 7px 1px rgba(0, 0, 0, 0.35);
+}
+.swal-button--cancel {
+  background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
 
 /* Build your own button classes ! */
