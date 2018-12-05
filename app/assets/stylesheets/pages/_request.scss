@@ -6,6 +6,8 @@
   display:flex;
   flex-direction: column;
   align-items: center;
+  // solution for the right footer position from Arbi
+  min-height: calc(100vh - 30vh - 100px )
 }
 
 

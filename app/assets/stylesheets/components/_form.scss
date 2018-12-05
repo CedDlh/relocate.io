@@ -42,10 +42,27 @@
     margin-bottom: 5px !important;
   }
 
-
+  select {
+    -webkit-appearance:none;
+    background-color: rgba(273,273,273, 1) !important;
+    box-shadow: none;
+  }
     /*the container must be positioned relative:*/
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
 
+input:-webkit-autofill {
+    -webkit-text-fill-color: grey !important;
+}
+
+select:-webkit-autofill {
+    -webkit-text-fill-color: grey !important;
+}
 
     /*HOME PROCEDUE DROP-DOWN FIELD*/
   #user_specialties {
@@ -54,12 +71,11 @@
     height: 50px;
     width: 220px;
     margin: 10px;
-    color: grey !important;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 18px;
     text-align-last: center;
-    background-color: white !important;
+    // background-color: white !important;
   }
   #user_specialties select {
     display: none;

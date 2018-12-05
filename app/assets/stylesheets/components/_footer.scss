@@ -6,8 +6,11 @@
   height: 50px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  width: 100vw;
+  position: static;
+  bottom: 0;
+  }
 
-}
 .footer-links {
   display: flex;
   align-items: center;
