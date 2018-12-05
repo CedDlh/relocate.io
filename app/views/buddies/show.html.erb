@@ -17,7 +17,11 @@
       <div class="action">
         <div class="actionContainer">
         <p><%= @buddy.first_name %> is a verified Buddy</p>
+        <% if user_signed_in? %>
           <%= link_to "Send Message", "#", class: 'btn-hover1 color-4 submit-button bold', id: 'message' %>
+          <% else %>
+          <%= "Please login to chat with #{@buddy.first_name}"%>
+          <% end %>
 
           <%= link_to "Request", buddy_requests_path(@buddy, date: params[:date]),
                                 data: { confirm: "Do you want to send a request for #{params[:date]}?" },
@@ -95,11 +99,11 @@
       </div> -->
     </div>
   </div>
+    <% if user_signed_in? %>
 
   <div id="chatbox" class="hidden">
     <%= render 'shared/chatroom', buddy: @buddy, chat_room: @chat_room %>
   </div>
-    <% if user_signed_in? %>
 
     <%= content_for :after_js2 do %>
 

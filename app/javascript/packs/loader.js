@@ -21,7 +21,7 @@ function hideLoading() {
   $("#match-button").click(function() {
     event.preventDefault();
    $("#show-container").fadeOut(500);
-   $("#loading-buddy").fadeIn(2500).removeClass('hidden');
+   $("#loading-buddy").fadeIn(3500).removeClass('hidden');
    setTimeout(function()
     { window.location = $("#match-button > a").attr('href'); }, 3000);
    //$("#loading-buddy").fadeOut(5000).addClass('hidden');
