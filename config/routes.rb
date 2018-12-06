@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   get '/my_requests', to: "buddies#my_requests"
   get '/my_tasks', to: "pages#my_tasks"
   get '/my_messages', to: "pages#my_messages"
+  get '/about_us', to: "pages#about_us"
 end
