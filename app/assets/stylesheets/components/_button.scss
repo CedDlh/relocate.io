@@ -172,6 +172,7 @@ a:hover {
 
 .buttons {
     display: flex;
+    flex-direction: column;
 }
 
 .btn-hover {
@@ -180,7 +181,7 @@ a:hover {
     font-weight: 100;
     color: #fff;
     cursor: pointer;
-    margin: 20px;
+    margin: 10px;
     height: 25px;
     text-align:center;
     border: none;
