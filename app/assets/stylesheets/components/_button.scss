@@ -67,7 +67,7 @@ a:hover {
     text-align:center;
     border: none;
     background-size: 300% 100%;
-
+  text-decoration: none !important;
     border-radius: 5px;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -90,6 +90,7 @@ a:hover {
     transition: all .4s ease-in-out;
     color: white;
     font-weight: 350;
+    text-decoration: none !important;
 }
 
 .btn-submit-index:focus {
@@ -172,7 +173,11 @@ a:hover {
 
 .buttons {
     display: flex;
+<<<<<<< HEAD
      justify-content: space-around;
+=======
+    flex-direction: column;
+>>>>>>> b3663d7b39580ae742a2bd704cee187d96caf7f8
 }
 
 .btn-hover {
@@ -181,7 +186,7 @@ a:hover {
     font-weight: 100;
     color: #fff;
     cursor: pointer;
-    margin: 20px;
+    margin: 10px;
     height: 25px;
     text-align:center;
     border: none;
