@@ -10,7 +10,7 @@
       <% @chats.each do |r| %>
         <div class="request" id="message-open">
           <div class="request-body">
-            <p><%= r.messages[-1]&.content %></p>
+            <p><%= r.user.first_name %>: <%= r.messages[-1]&.content %></p>
           </div>
           <div class="request-body">
             <div class="buttons">
