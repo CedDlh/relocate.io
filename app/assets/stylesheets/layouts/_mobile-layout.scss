@@ -10,7 +10,6 @@
     background-position: center !important;
   }
 
-
   .content {
   position: absolute !important;
   top: 10% !important;
@@ -38,7 +37,7 @@
 
   .form-wrapper {
     display: inline-block !important;
-    top: 45% !important;
+    top: 55% !important;
     left: 20% !important;
   }
 
@@ -55,16 +54,9 @@
   .containerContent{
     display: block !important;
 
-    height: 38% !important;
     background: white;
     display: flex;
     padding: 0 20px !important;
-  }
-
-
-  .container1 {
-    height: 160vh !important;
-    background: white !important;
   }
 
   .contentLeft{
@@ -79,6 +71,7 @@
     h1{
       font-size: 26px !important;
       margin-top: 0 !important;
+      height: 0vh;
     }
   }
 
@@ -94,7 +87,7 @@
   }
 
   .special {
-    height: 30% !important;
+    height: 20vh !important;
     width: 100% !important;
   }
 
@@ -114,7 +107,7 @@
   }
 
   .description{
-     height: 220px !important;
+     height: 280px !important;
       padding-top: -133px !important;
       padding: 15px !important;
     p{

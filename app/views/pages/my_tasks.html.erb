@@ -15,7 +15,7 @@
           <%= cl_image_tag r.buddy.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
 
         </div>
-        <p>Buddy: <%= r.buddy.first_name %></p>
+        <h2><%= r.buddy.first_name %></h2>
       </div>
 
 
@@ -23,13 +23,12 @@
 
       <div class="request-body" style= "align-self: self-start";>
         <h2>Topic: <%= r.buddy.specialties %></h2>
-        <p>Date: <%= r.date %> </p>
-        <p>Place: Burgeramt</p>
+        <h2>Date: <%= r.date %> </h2>
+        <h2>Place: Burgeramt</h2>
       </div>
 
       <div class="request-body" style= "align-self: self-start";>
-        <h2>Status: <%= r.status %></h2>
-        <p> Request sent: <%= r.created_at %></p>
+        <h2><%= r.status %></h2>
         <div class="buttons">
           <button class="btn-hover color-4">Chat</button>
           <%= link_to "Delete", request_path(id: r.id),
