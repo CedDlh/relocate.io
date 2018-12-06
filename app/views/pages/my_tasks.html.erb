@@ -33,6 +33,25 @@
               method: :delete, class: "btn-hover color-8" %>
            </div>
           </div>
+        <h2><%= r.buddy.first_name %></h2>
+      </div>
+
+      <div class="request-body" style= "align-self: self-start";>
+        <h2>Topic: <%= r.buddy.specialties %></h2>
+        <h2>Date: <%= r.date %> </h2>
+        <h2>Place: Burgeramt</h2>
+      </div>
+
+      <div class="request-body" style= "align-self: self-start";>
+        <h2><%= r.status %></h2>
+         <div class="buttons">
+            <% if r.accepted? %>
+              <%= link_to "Chat", chat_room_path(current_user.chat_rooms_as_user.with_buddy(r.buddy).first), remote: true, class: 'btn-hover color-4', id: 'message' %>
+            <% end %>
+            <%= link_to "Delete", request_path(id: r.id),
+            method: :delete, class: "btn-hover color-8" %>
+         </div>
+           </div>
         </div>
     <% end %>
   <% end %>
