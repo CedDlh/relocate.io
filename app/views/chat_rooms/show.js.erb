@@ -1,18 +1,42 @@
 function replaceChatRoom() {
   // # Generate the partial
-
   const chatRoom = '<%= j render "shared/chatroom", buddy: @buddy, chat_room: @chat_room %>'
   // # Remove previous chat
-
   const currentChatroom = document.querySelector('.chatroom-window')
   if (currentChatroom) {
     currentChatroom.remove();
   }
   // # Add the new one
-  const container = document.querySelector(".container")
+  const container = document.getElementById("chatbox");
+  container.classList.remove('hidden');
   container.insertAdjacentHTML("beforeend", chatRoom);
 }
+// replaceChatRoom()
+function toggleChat() {
+  const chatBox = document.getElementById('chatbox');
+  chatBox.classList.toggle('hidden');
+  chatBox.insertAdjacentHTML("beforeend", chatRoom);
+}
 
-console.log("hello")
+function closeChat() {
+  document.getElementById('chatbox').classList.add('hidden');
+}
 
-replaceChatRoom()
+var msgOpens = document.querySelectorAll('#message');
+
+if (msgOpens) {
+  msgOpens.forEach(function(msgOpen) {
+    console.log('some string');
+    msgOpen.addEventListener("click", replaceChatRoom())
+    // event.preventDefault();
+  })
+
+
+}
+// $(document).ready(function(){
+//   setTimeout(toggleChat, 1);
+// });
+var btnClose = document.getElementById('close-btn');
+if (btnClose) {
+  btnClose.addEventListener("click", closeChat);
+}

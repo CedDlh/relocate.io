@@ -5,8 +5,8 @@ puts "Cleaning database..."
 puts "users cleaned. Creating new..."
 
 # User.create(first_name: "Admin", last_name: "Minister", city: "Berlin", plz: nil,
-#             languages: nil, specialties: nil,
-#             buddy: false, email: "a@a.at", password: "12345678")
+            # languages: nil, specialties: nil,
+            # buddy: false, email: "a@a.at", password: "12345678")
 
 User.create(first_name: "Lucas", last_name: "Petti", city: "Berlin", plz: 10969,
             languages: ["German", "English"], specialties: "Anmeldung",

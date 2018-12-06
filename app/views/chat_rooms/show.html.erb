@@ -1,4 +1,6 @@
-<div class="row">
+<%# render 'shared/chatroom' %>
+
+<div class="row chatroom-window">
   <div class="col-sm-6 col-sm-offset-3">
     <div class="chat-header"><h4>Message<%= @chat_room.name %></h4></div>
     <div class="messages">
@@ -14,22 +16,24 @@
     </div>
   </div>
 </div>
-
-<% content_for :after_js do %>
-  <script>
-    console.log("from afterjs")
-    scrollLastMessageIntoView();
-    App['chat_room_<%= @chat_room.id %>'] = App.cable.subscriptions.create(
-      { channel: 'ChatRoomsChannel', chat_room_id: <%= @chat_room.id %> },
-      {
-        received: (data) => {
-          if (data.current_user_id !== <%= current_user.id %>) {
-            const messagesContainer = document.querySelector('.messages');
-            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-            scrollLastMessageIntoView();
+<%= content_for :after_js2 do %>
+    <script>
+      console.log("from afterjs2")
+      scrollLastMessageIntoView();
+      App['chat_room_<%= @chat_room.id %>'] = App.cable.subscriptions.create(
+        { channel: 'ChatRoomsChannel', chat_room_id: <%= @chat_room.id %> },
+        {
+          received: (data) => {
+            if (data.current_user_id !== <%= current_user.id %>) {
+              const messagesContainer = document.querySelector('.messages');
+              messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+              scrollLastMessageIntoView();
+            }
           }
         }
-      }
-    )
-  </script>
+      )
+
+
+
+    </script>
 <% end %>

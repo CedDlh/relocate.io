@@ -8,8 +8,8 @@ class User < ApplicationRecord
   has_many :requests, class_name: 'Request', foreign_key: 'buddy_id'
   has_many :availabilities
   has_many :messages, dependent: :destroy
-  has_many :chat_rooms, class_name: 'Chat_room', foreign_key: 'user_id'
-  has_many :chat_rooms, class_name: 'Chat_room', foreign_key: 'buddy_id'
+  has_many :chat_rooms_as_user, class_name: 'ChatRoom', foreign_key: 'user_id'
+  has_many :chat_rooms_as_buddy, class_name: 'ChatRoom', foreign_key: 'buddy_id'
 
   # # validations for both:
   validates :first_name, presence: true
