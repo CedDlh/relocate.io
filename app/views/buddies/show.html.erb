@@ -32,7 +32,7 @@
 
             </div>
             <div class="item2">
-              <p > Available on <%= params[:date] %></p>
+              <p > Available on <%= Time.zone.parse(params[:date]).strftime("%A, %b %d") %></p>
             </div>
           </div>
 
