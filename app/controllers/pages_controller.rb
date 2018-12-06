@@ -14,12 +14,20 @@ class PagesController < ApplicationController
 
   def my_tasks
     @requests = policy_scope(Request.where(user_id: current_user.id).where.not(status: "Waiting"))
+
+    # @chat_room = ChatRoom.find_by(buddy_id: @buddy.id, user_id: current_user.id) if @requests[0]
+    # Define @buddy:
+    #   # @buddy = User.find(@requests.first&.buddy_id)
+    #
+    #   @chat_room = ChatRoom.create!(buddy_id: @buddy.id, user_id: current_user.id)
+    # end
+    # authorize @chat_room
   end
 
   def my_messages
     # @chats = Message.where(user_id: current_user.id).map { |m| [] << m.chat_room }.flatten.uniq
     if current_user.buddy
-      @chats = ChatRoom.where(buddy_id: current_user.id) && ChatRoom.where(user_id: current_user.id)
+      @chats = ChatRoom.where(buddy_id: current_user.id)
     else
       @chats = ChatRoom.where(user_id: current_user.id)
     end
