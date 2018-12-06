@@ -172,7 +172,10 @@ select:-webkit-autofill:active {
     flex-direction: row-reverse;
     z-index: 10;
   }
-
+input.form-control {
+    border: none !important;
+    background-color: white !important;
+  }
 
 .form-control{
   outline: none !important;
