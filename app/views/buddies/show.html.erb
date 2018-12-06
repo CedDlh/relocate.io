@@ -1,3 +1,8 @@
+<!-- app/views/offers/show.html.erb -->
+<% content_for :meta_title, "#{@buddy.first_name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @buddy.description %>
+<%# content_for :meta_image, cl_image_path(@buddy.photo.path) %>
+
 <div class="container1">
   <div class="banner1" style="background-image: url('https://fbcoverstreet.com/content/439L15S1D8280Hbk2X041m5GF3K93J4l2YCfK8l432LBT478P6354944YMN3Ucw6.jpg');">
     <% if user_signed_in? %>
