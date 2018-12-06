@@ -9,11 +9,12 @@
 <div class="container-request text-center">
   <% if @requests.any? %>
     <% @requests.each do |r| %>
-      <%#= link_to buddy_path(r.buddy), action: 'go' do %>
         <div class="request">
           <div class="request-body">
             <div class="avatar2">
-              <%= cl_image_tag r.buddy.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
+              <%= link_to buddy_path(r.buddy, date: r.date) do %>
+                <%= cl_image_tag r.buddy.photo, height: 110, width: 110, crop: :fill, gravity: :face, radius: :max %>
+              <% end %>
             </div>
           <h2><%= r.buddy.first_name %></h2>
         </div>
@@ -33,7 +34,6 @@
            </div>
           </div>
         </div>
-      <%# end %>
     <% end %>
   <% end %>
 </div>
