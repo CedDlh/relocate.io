@@ -32,13 +32,14 @@
 
             </div>
             <div class="item2">
-              <p > Available on <%= Time.zone.parse(params[:date]).strftime("%A, %b %d") %></p>
+              <p > Available on <%= Time.zone.parse(params[:date]).strftime("%A %e %b %Y") %></p>
             </div>
           </div>
 
 
           <!-- data: { confirm: "Do you want to send a request for #{params[:date]}?" }, -->
-          <div class="btn-hover1 color-4 submit-button bold" id="reqBtn" data-date="<%= params[:date] %>">Ask <%= @buddy.first_name %> for help </div>
+          <%  date_formatted = Time.zone.parse(params[:date]).strftime("%A %e %b %Y") %>
+          <div class="btn-hover1 color-4 submit-button bold" id="reqBtn" data-date="<%= date_formatted%>" data-name="<%= @buddy.first_name %>" >Ask <%= @buddy.first_name %> for help </div>
 
           <%= link_to "Request", buddy_requests_path(@buddy, date: params[:date]), data: { date: params[:date] },
                                 method: :post, class: 'btn-hover1 color-4 submit-button bold', id: 'sweet-alert' %>
