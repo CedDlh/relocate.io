@@ -42,7 +42,7 @@
   .form-wrapper {
     display: inline-block !important;
     top: 55% !important;
-    left: 20% !important;
+    left: 10% !important;
   }
 
   .centered-btn {
@@ -191,12 +191,32 @@
 }
 
 
+//////////////HOME///////////
+
+
+input.form-control {
+    border: none !important;
+    width: 240px !important;
+    height: 43px !important;
+    -webkit-appearance: none;
+  }
+
 .form-control{
   outline: none !important;
   background-color: white !important;
 }
 
+.inputfield {
+    width: 280px !important;
+}
+
+.btn-hover1 {
+  width: 280px !important;
+}
 
 
+#user_specialties{
+      width: 215px !important;
+}
 
 }

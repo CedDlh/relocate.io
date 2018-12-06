@@ -138,7 +138,7 @@ select:-webkit-autofill:active {
   #user_availability {
     position: relative;
     height: 40px;
-    width: 189px;
+    width: 203px;
     margin: 5px;
     margin-left: -12px;
     text-align: center;
@@ -172,14 +172,6 @@ select:-webkit-autofill:active {
     flex-direction: row-reverse;
     z-index: 10;
   }
-input.form-control {
-    border: none !important;
-    background-color: white !important;
-  }
 
-.form-control{
-  outline: none !important;
-  background-color: white !important;
-}
 
 
