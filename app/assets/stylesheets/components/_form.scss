@@ -70,19 +70,22 @@ select:-webkit-autofill:active {
 
     /*HOME PROCEDUE DROP-DOWN FIELD*/
   #user_specialties {
+
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
+    margin-left: 1px !important;
     position: relative;
     height: 50px;
-    width: 215px;
+    width: 180px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 18px;
     text-align-last: center;
-    background-color: white !important;
     color: rgba(155, 155, 155, 1) !important;
     border: none;
-    margin-left: -25px;
-    padding-left: 16px;
     outline: none;
   }
 

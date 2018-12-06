@@ -23,7 +23,7 @@
     color: #484e4f;
     opacity: 0.85;
     height: 25vh;
-    width: 100vh;
+    width: 110vh;
 }
 
 .request:hover {
@@ -66,9 +66,12 @@
 }
 
 .request-body {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    // width: 25vh;
+    padding-top: 20px;
+    h2 {
+      margin-top: 2px;
+    }
 }
 
 
