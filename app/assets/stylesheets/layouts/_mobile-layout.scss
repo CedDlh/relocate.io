@@ -42,7 +42,7 @@
   .form-wrapper {
     display: inline-block !important;
     top: 55% !important;
-    left: 20% !important;
+    left: 10% !important;
   }
 
   .centered-btn {
@@ -81,7 +81,7 @@
 
   .actionContainer{
     p{
-      font-size: 20px !important;
+      font-size: 17px !important;
     }
   }
 
@@ -111,13 +111,23 @@
   }
 
   .description{
-     height: 280px !important;
+      height: 250px !important;
       padding-top: -133px !important;
-      padding: 15px !important;
+      width: 100% !important;
+      margin-top: 5vh !important;
+      padding-left: 0px !important;
+      text-align: justify;
     p{
       font-size: 15px !important;
     }
   }
+
+  .specialContainer {
+    margin-left: 0 !important;
+
+  }
+
+
   .action {
     height: 270px !important;
     width: 320px !important;
@@ -170,7 +180,6 @@
 }
 
 
-
 .request{
   width: 95vw !important;
   padding: 0px !important;
@@ -182,24 +191,33 @@
 }
 
 
+//////////////HOME///////////
 
 
+input.form-control {
+    border: none !important;
+    width: 240px !important;
+    height: 43px !important;
+    -webkit-appearance: none;
+  }
+
+.form-control{
+  outline: none !important;
+  background-color: white !important;
+}
+
+.inputfield {
+    width: 280px !important;
+}
+
+.btn-hover1 {
+  width: 280px !important;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#user_specialties{
+      width: 215px !important;
+      text-align: center !important;
+}
 
 }
