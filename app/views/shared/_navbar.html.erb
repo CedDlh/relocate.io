@@ -81,8 +81,24 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
+
+        <li>
+
+            <% if user_signed_in? %>
+
+            <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i> Sign out
+            <% end %>
+
+            <% else %>
+
+            <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+          <% end %>
+
+        </li>
+        <li><%= link_to "My Appointments", my_tasks_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <li><%= link_to "Messages", my_messages_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
 
       </ul>
     </div>
