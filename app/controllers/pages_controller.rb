@@ -47,4 +47,8 @@ class PagesController < ApplicationController
       @chat_room = @chats[0]
     end
   end
+
+  def about_us
+
+  end
 end
