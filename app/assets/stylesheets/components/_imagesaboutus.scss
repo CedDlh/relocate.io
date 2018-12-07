@@ -10,18 +10,19 @@
     color: white;
     font-weight: bold;
   }
-
-
 }
-
 
 .about-us-img {
 // position: absolute;
-
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
-background-position: center;
+  background-position: center;
+  padding: 10px;
+  margin: 15px;
 
-}
+
+  }
 
 .container-about-us {
 
@@ -37,10 +38,11 @@ background-position: center;
   color: white;
   font-weight: bold;
  text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
-flex-direction: row;
+  flex-direction: row;
 
-#p {
-  font-size: 35px;
+  p {
+  padding: 5px;
   text-align: center;
+
 }
 }
