@@ -11,7 +11,7 @@ function bindSweetAlertButtonDemo() {
         title: `Confirm you want ${name} to assist you on ${date} ?`,
         // icon: 'info',
         content: {
-          element: "input",
+          element: "textArea",
           attributes: {
             placeholder: `Add a nice description and offer ${name} a little incentive to help you out...`,
             icon: "message",
