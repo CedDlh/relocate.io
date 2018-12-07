@@ -9,26 +9,28 @@
     text-align: center;
     color: white;
     font-weight: bold;
+    padding: 5vh;
   }
-
-
 }
-
 
 .about-us-img {
 // position: absolute;
-
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
-background-position: center;
+  background-position: center;
+  padding: 10px;
+  margin: 15px;
 
-}
+
+  }
 
 .container-about-us {
 
   height: 100vh;
   width: 100vw;
   font-family: "Cutive Mono";
-  margin-top: -4%;
+  margin-top: -10%;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -37,10 +39,11 @@ background-position: center;
   color: white;
   font-weight: bold;
  text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
-flex-direction: row;
+  flex-direction: row;
 
-#p {
-  font-size: 35px;
+  p {
+  padding: 5px;
   text-align: center;
+
 }
 }
