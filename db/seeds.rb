@@ -10,7 +10,7 @@ puts "users cleaned. Creating new..."
 
 
 User.create(first_name: "Lucas", last_name: "Petti", city: "Berlin", plz: 10969,
-            languages: "Spanish, English", specialties: "Anmeldung, Bank Account", description: "My name is Lucas. I am based in Berlin and renovate and rentout out flats.
+            languages: "Spanish, English", specialties: "Anmeldung", description: "My name is Lucas. I am based in Berlin and renovate and rentout out flats.
             I'm made and raised in Brazil and moved to Berlin 10 years ago. So I know how difficult it is to settle in Berlin.  I decided to help fellow immigrants on my spare time.
             I can help you dealing with most of your administratives tasks and I really enjoy Techno music and going out clubbing on the weekend.",
             buddy: true, email: "l@hotmail.com", password: "relocate",
