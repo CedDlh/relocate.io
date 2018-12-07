@@ -28,7 +28,7 @@ User.create(first_name: "Ole", last_name: "Legend", city: "Berlin", plz:  10969,
             I can help you dealing with most of your administratives tasks and we can also talk about football while waiting for your appointment.",
             photo: open('https://res.cloudinary.com/da516w7pk/image/upload/v1543582190/ZEN-Portraits-146-1-min.jpg'))
 
-User.create(first_name: "Karl", last_name: "Kalla", city: "Berlin", plz: 10969,
+User.create(first_name: "Karl", last_name: "Kalla", city: "Berlin", plz: 12220,
             languages: "English, German", specialties: "Tax advice", description: "My name is Karl . I am based in Berlin and  working as a tour guide. I’m from Berlin and love the variety of cultures in the city . I know how difficult it is to settle in Berlin so I decided to help fellow immigrants on my spare time.
             I can help you dealing with most of your administratives tasks and we can also have chat about sightseeing.",
             buddy: true, email: "k@od.com", password: "relocate",
