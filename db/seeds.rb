@@ -18,7 +18,7 @@ User.create(first_name: "Lucas", last_name: "Petti", city: "Berlin", plz: 10969,
 
 User.create(first_name: "Cedric", last_name: "Delahaye", city: "Berlin", plz:  10969,
             languages: "French, Catalan", specialties: "Bank Account",
-            buddy: true, email: "c@mail.com", password: "relocate",
+            buddy: false, email: "c@mail.com", password: "relocate",
             photo: open('https://res.cloudinary.com/da516w7pk/image/upload/v1543582061/Screen_Shot_2018-11-30_at_13.46.32.png'))
 
 User.create(first_name: "Ole", last_name: "Legend", city: "Berlin", plz:  10969,
