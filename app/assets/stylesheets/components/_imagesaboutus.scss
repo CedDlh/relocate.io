@@ -17,11 +17,13 @@
 // position: absolute;
   height: 180px;
   width: 180px;
+  vertical-align: middle !important;
   border-radius: 50%;
   background-position: center;
   padding: 10px;
   margin: 15px;
-
+  display: flex;
+  background-position: 50% 75%;
 
   }
 
@@ -44,6 +46,14 @@
   p {
   padding: 5px;
   text-align: center;
+}
 
+h2 {
+  text-align:center;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
 }
 }
